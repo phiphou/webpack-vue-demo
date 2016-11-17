@@ -26,7 +26,7 @@ module.exports = {
       'silent': true,
       'screenshots': {
         'enabled': true,
-        'path': projectRoot + '/test/e2e/screenshots',
+        'path': projectRoot + '/test/e2e/reports/screenshots',
         'on_failure': true,
         'on_error': true
       },
