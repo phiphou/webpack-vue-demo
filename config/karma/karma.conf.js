@@ -13,7 +13,7 @@ module.exports = config => {
         : [ {type: 'html'},
             {type: 'text-summary'}
         ],
-      subdir: function(browser) {
+      subdir: function (browser) {
         return browser.toLowerCase().split(/[ /-]/)[0]
       },
       watermarks: {
@@ -50,8 +50,7 @@ module.exports = config => {
       'karma-chai',
       'karma-chai-as-promised',
       'karma-sourcemap-loader',
-      'karma-mocha-reporter',
-      'karma-sinon-stub-promise'
+      'karma-mocha-reporter'
     ],
     preprocessors: {'./karma.entry.js': ['webpack']},
     reporters: ['mocha', 'coverage'],

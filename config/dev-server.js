@@ -4,7 +4,6 @@ var webpackConfig = require('./webpack/webpack.prod')
 var opn = require('opn')
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT
-console.log('PPPP ' + process.env.PORT)
 var app = express()
 var compiler = webpack(webpackConfig)
 
