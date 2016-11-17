@@ -1,0 +1,63 @@
+/* We can import any classic CSS from anywhere */
+@import style.css
+@import _typography
+
+body
+  display: block
+  margin: 0
+  padding: 0
+
+h1.title
+  font-size: 36px
+  margin: auto 20px
+
+.header
+  display: flex
+  padding-left: 20px
+  background-color: #272b2b
+  border-bottom: 2px solid #737373
+  margin-bottom: 50px
+
+#logo a
+  display: block
+  width: 96px
+  height: 96px
+  background: url(../assets/img/logo.png) no-repeat left top
+  span
+    display: none
+
+.content
+  display: block
+  img
+    display: block
+    margin: 0 auto
+  h2
+    display: block
+    font-size: 46px
+
+.result
+  text-align: center
+  min-width: 100%
+
+.avatar
+  border-radius: 50%
+  margin-left: 20px
+  width: 256px
+  height: 256px
+  background: #7f8c8d url(../assets/img/loader.gif) no-repeat center
+  border: 6px solid #fff
+
+@media (min-width: 1000px)
+  .content
+    display: table
+    margin-left: auto
+    margin-right: auto
+    img, h2
+      display: table-cell
+      vertical-align: middle
+      margin: 10px
+    img
+      width: 128px
+      height: 128px
+    h2
+      font-size: 22px

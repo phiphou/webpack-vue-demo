@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: 6.9
+  environment:
+    CIRCLE_ENV: true
+dependencies:
+  pre:
+    - rm -rf node_modules
+test:
+  post:
+    - npm run prod
+    - mv ./coverage ${CIRCLE_ARTIFACTS}
+    - bash <(curl -s https://codecov.io/bash)
+    - npm run e2e

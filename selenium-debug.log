@@ -1,0 +1,59 @@
+12:07:29.334 INFO - Launching a standalone Selenium Server
+12:07:29.375 INFO - Java: Oracle Corporation 25.101-b13
+12:07:29.375 INFO - OS: Windows 7 6.1 amd64
+12:07:29.382 INFO - v2.53.1, with Core v2.53.1. Built from revision a36b8b1
+12:07:29.418 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+12:07:29.419 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+12:07:29.423 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform VISTA
+12:07:29.423 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+12:07:29.423 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+12:07:29.479 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+12:07:29.479 INFO - Selenium Server is up and running
+12:07:29.659 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=App Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+12:07:29.666 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=App Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 19437
+Only local connections are allowed.
+12:07:31.960 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=App Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+12:07:31.968 INFO - Executing: [get: http://localhost:8082])
+12:07:33.564 INFO - Done: [get: http://localhost:8082]
+12:07:33.569 INFO - Executing: [find elements: By.cssSelector: body])
+12:07:33.591 INFO - Done: [find elements: By.cssSelector: body]
+12:07:33.595 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: body]])
+12:07:33.608 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: body]]
+12:07:33.613 INFO - Executing: [find elements: By.cssSelector: .hello])
+12:07:33.623 INFO - Done: [find elements: By.cssSelector: .hello]
+12:07:33.627 INFO - Executing: [find element: By.cssSelector: .hello button])
+12:07:33.639 INFO - Done: [find element: By.cssSelector: .hello button]
+12:07:33.641 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: .hello button]])
+12:07:33.655 INFO - Done: [get text: 2 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: .hello button]]
+12:07:33.658 INFO - Executing: [find elements: By.cssSelector: input[id=g_all])
+12:07:33.668 INFO - Done: [find elements: By.cssSelector: input[id=g_all]
+12:07:33.671 INFO - Executing: [is selected: 3 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_all]])
+12:07:33.677 INFO - Done: [is selected: 3 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_all]]
+12:07:33.683 INFO - Executing: [find element: By.cssSelector: input[id=g_male]])
+12:07:33.693 INFO - Done: [find element: By.cssSelector: input[id=g_male]]
+12:07:33.696 INFO - Executing: [click: 4 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_male]]])
+12:07:33.716 INFO - Done: [click: 4 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_male]]]
+12:07:33.719 INFO - Executing: [find elements: By.cssSelector: input[id=g_male])
+12:07:33.730 INFO - Done: [find elements: By.cssSelector: input[id=g_male]
+12:07:33.732 INFO - Executing: [is selected: 4 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_male]]])
+12:07:33.738 INFO - Done: [is selected: 4 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_male]]]
+12:07:33.741 INFO - Executing: [find element: By.cssSelector: input[id=g_male]])
+12:07:33.746 INFO - Done: [find element: By.cssSelector: input[id=g_male]]
+12:07:33.749 INFO - Executing: [click: 4 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_male]]])
+12:07:33.758 INFO - Done: [click: 4 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_male]]]
+12:07:33.760 INFO - Executing: [find elements: By.cssSelector: input[id=g_male])
+12:07:33.765 INFO - Done: [find elements: By.cssSelector: input[id=g_male]
+12:07:33.768 INFO - Executing: [is selected: 4 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_male]]])
+12:07:33.772 INFO - Done: [is selected: 4 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_male]]]
+12:07:34.175 INFO - Executing: [find element: By.cssSelector: input[id=g_female]])
+12:07:34.186 INFO - Done: [find element: By.cssSelector: input[id=g_female]]
+12:07:34.188 INFO - Executing: [click: 5 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_female]]])
+12:07:34.206 INFO - Done: [click: 5 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_female]]]
+12:07:34.209 INFO - Executing: [find elements: By.cssSelector: input[id=g_female])
+12:07:34.219 INFO - Done: [find elements: By.cssSelector: input[id=g_female]
+12:07:34.222 INFO - Executing: [is selected: 5 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_female]]])
+12:07:34.228 INFO - Done: [is selected: 5 [[ChromeDriver: chrome on XP (bed4e922978a12c256ada68801a8e600)] -> css selector: input[id=g_female]]]
+12:07:34.631 INFO - Executing: [delete session: 5675b726-40fc-4341-be32-47e16f98a818])
+12:07:35.274 INFO - Done: [delete session: 5675b726-40fc-4341-be32-47e16f98a818]
