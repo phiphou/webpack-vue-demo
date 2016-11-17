@@ -13,6 +13,7 @@
   },
   "description": "A small demo that shows how to use webpack and ES6.",
   "scripts": {
+    "postinstall": "node ./node_modules/selenium-standalone/bin/selenium-standalone install",
     "start": "webpack-dev-server --config ./config/webpack/webpack.dev.js --inline --port 8080 --open",
     "prod": "rimraf dist && cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.prod.js --profile --colors --display-error-details --display-cached --bail",
     "test": "rimraf coverage && cross-env NODE_ENV=test karma start ./config/karma/karma.conf.js --single-run --slow 0 -d --log-timer-events",
