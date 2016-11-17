@@ -9,3 +9,5 @@ coverage
 logs
 *.log
 npm-debug.log*
+
+test/e2e/reports/*
