@@ -37,18 +37,6 @@ module.exports = {
         loader: 'eslint-loader',
         exclude: /node_modules/
       },
-      // Loaders
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          postcss: [
-            require('autoprefixer')({
-              browsers: ['last 2 versions']
-            })
-          ]
-        }
-      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -58,9 +46,37 @@ module.exports = {
         }
       },
       {
-        test: /\.(scss|css|sass)$/,
-        loaders: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap']
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader?sourceMap!postcss-loader'
+        })
       },
+      // support for .scss/.sass files
+      {
+        test: /\.(scss|sass)$/,
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader?sourceMap!postcss-loader!sass-loader'
+        })
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            sass: ExtractTextPlugin.extract({
+              loader: 'css-loader?sourceMap!postcss-loader!sass-loader',
+              fallbackLoader: 'vue-style-loader' // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
+            }),
+            css: ExtractTextPlugin.extract({
+              loader: 'css-loader?sourceMap!postcss-loader',
+              fallbackLoader: 'vue-style-loader' // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
+            })
+          }
+        }
+      },
+      // support for image files
       {
         test: /^((?!font).)*\.(png|jpe?g|gif|svg)$/,
         loader: 'file-loader?publicPath=../&name=assets/img/[name]-[hash:7].[ext]'
@@ -91,11 +107,11 @@ module.exports = {
         context: '/',
         postcss: [
           autoprefixer({
-            browsers: ['last 2 version']
+            browsers: ['last 3 version']
           })
         ],
         sassLoader: {
-          includePaths: [path.resolve(__dirname, 'src/style', 'sass')]
+          includePaths: [path.resolve(__dirname, 'src', 'sass')]
         }
       }
     }),

@@ -14,5 +14,3 @@ export default {
     <hello></hello>
   </div>
 </template>
-
-<style src="../style/style.sass" lang="sass"></style>

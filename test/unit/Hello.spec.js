@@ -10,8 +10,8 @@ let response = {
   results: [
     {
       name: {
-        first: 'npn',
-        last: 'lkj'
+        first: 'firstname',
+        last: 'lastname'
       },
       gender: 'female',
       picture: {
