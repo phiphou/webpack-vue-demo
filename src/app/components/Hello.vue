@@ -16,6 +16,7 @@
 </template>
 
 <script>
+require('./style.sass')
 import Vue from 'vue'
 Vue.filter('capitalize', value => value.charAt(0).toUpperCase() + value.substr(1))
 export default {
@@ -65,6 +66,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style src="./style.sass" lang="sass"></style>

@@ -1,4 +1,4 @@
-const config = require('./webpack/webpack.test')
+const config = require('../webpack/webpack.test')
 const projectRoot = process.cwd()
 // http://nightwatchjs.org/guide#settings-file
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
   'selenium': {
     'start_process': true,
     'server_path': './node_modules/selenium-standalone/.selenium/selenium-server/2.53.1-server.jar',
-    'log_path': '/test/e2e/reports',
+    'log_path': projectRoot + '/test/e2e/reports',
     'host': '127.0.0.1',
     'port': 4444,
     'cli_args': {

@@ -1,6 +1,6 @@
 var express = require('express')
 var webpack = require('webpack')
-var webpackConfig = require('./webpack/webpack.prod')
+var webpackConfig = require('../webpack/webpack.prod')
 var opn = require('opn')
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || 8082
@@ -23,7 +23,7 @@ app.use(devMiddleware)
 
 // serve pure static assets
 // var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
-app.use('./', express.static('../../src/public'))
+app.use('./', express.static('../../../src/public'))
 
 module.exports = app.listen(port, function (err) {
   if (err) {

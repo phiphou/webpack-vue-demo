@@ -11,7 +11,7 @@ var server = require('./dev-server.js')
 // http://nightwatchjs.org/guide#settings-file
 var opts = process.argv.slice(2)
 if (opts.indexOf('--config') === -1) {
-  opts = opts.concat(['--config', './config/nightwatch.js'])
+  opts = opts.concat(['--config', './config/nightwatch/nightwatch.js'])
 }
 if (opts.indexOf('--env') === -1) {
   opts = opts.concat(['--env', 'chrome'])
