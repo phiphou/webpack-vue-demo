@@ -8,7 +8,7 @@
 
 # webpack-vue-demo
 
-A very basic but complete demo project that use [VueJs](http://babeljs.io/) as front-end framework, [Babel](http://babeljs.io/) for [ES6](http://www.ecma-international.org/ecma-262/6.0/) transpilation, [Webpack2](http://webpack.github.io/) as module loader, [SASS](http://sass-lang.com/) as a CSS preprocessor, [Karma](https://karma-runner.github.io/1.0/), [Mocha](http://mochajs.org/), [Chai](http://chaijs.com/) and [chai-as-promised](http://chaijs.com/plugins/chai-as-promised/) for unit tests, [nightwatch](http://nightwatchjs.org/) for e2e tests and finally [Istanbul](https://github.com/gotwarlost/istanbul) for code coverage.
+A very basic but complete demo project that use [VueJs](http://babeljs.io/) as front-end framework, [Babel](http://babeljs.io/) for [ES6](http://www.ecma-international.org/ecma-262/6.0/) transpilation, [Webpack2](http://webpack.github.io/) as module loader, [SASS](http://sass-lang.com/) as a CSS preprocessor, [Karma](https://karma-runner.github.io/1.0/), [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/) for unit tests, [nightwatch](http://nightwatchjs.org/) for e2e tests and finally [Istanbul](https://github.com/gotwarlost/istanbul) for code coverage.
 
 ## Quick Start
 
@@ -25,7 +25,7 @@ Your default browser should open at [http://127.0.0.1:8080](http://127.0.0.1:808
  * [Quick Start](#quick-start)
  * [Install](#install)
  * [Usage](#usage)
-   * [Development](#start-developing)
+   * [Development](#start-developping)
    * [Building](#building)
    * [Testing](#testing)
      * [Unit tests](#unit-tests)
@@ -47,6 +47,12 @@ $ cd webpack-vue-demo
 $ npm install
 ```
 Dependencies will be installed in the `./node_modules` folder.
+
+If you prefer, you can also use the new **[Yarn](https://yarnpkg.com/)** package manager.
+
+```bash
+$ yarn
+```
 
 ## Usage
 
@@ -85,6 +91,7 @@ Tests are written in ES6 for [Mocha](http://mochajs.org/) and use [Chai](http://
 ##### E2E-tests
 
 [NightwatchJs](https://www.nightwatchjs.org) is used as E2E-tests test-runner, you can configure it in the [`./config/nightwatch.js`](/config/nightwatch.js) file.
+
 You can run e2e tests by just typing :
 
 ```bash
