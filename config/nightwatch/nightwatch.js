@@ -34,6 +34,9 @@ module.exports = {
         'devServerURL': 'http://localhost:' + (process.env.PORT || config.port)
       }
     },
+    'circleci': {
+      'output_folder': '${CIRCLE_TEST_REPORTS}' // eslint-disable-line no-template-curly-in-string
+    },
     'firefox': {
       'desiredCapabilities': {
         'browserName': 'firefox',
