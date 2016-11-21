@@ -12,3 +12,4 @@ test:
     - mv ./coverage ${CIRCLE_ARTIFACTS}
     - bash <(curl -s https://codecov.io/bash)
     - npm run e2e
+    - mv ./test/e2e/reports ${CIRCLE_ARTIFACTS}
