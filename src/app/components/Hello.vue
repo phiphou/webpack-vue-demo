@@ -1,23 +1,21 @@
 <template lang="pug">
   .hello
-    a.refresh(href='/', @click.prevent='reload()')
-      | Refresh
-
+    a.refresh(href='/', @click.prevent='reload()') Refresh
     .container
       ul
         li
-          input#f-option(type='radio', name='s', v-model='gender', value='all')
-          label(for='f-option') All
+          input#g_all(type='radio', name='s', v-model='gender', value='all')
+          label#g_all(for='g_all') All
           .check
         li
-          input#s-option(type='radio', name='s', v-model='gender', value='male')
-          label(for='s-option') Male
+          input#g_male(type='radio', v-model='gender', value='male')
+          label#g_male(for='g_male') Male
           .check
         li
-          input#t-option(type='radio', name='s', v-model='gender', value='female')
-          label(for='t-option') Female
+          input#g_female(type='radio', name='s', v-model='gender', value='female')
+          label#g_female(for='g_female') Female
           .check
-    ul.bob(v-show='ready')
+    ul.bob
       li(v-for='person in filteredPeople')
         .item
           img.item_avatar(:src='person.picture.thumbnail')

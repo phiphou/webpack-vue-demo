@@ -9,8 +9,7 @@ export default {
 }
 </script>
 
-<template>
-  <div id="app">
-    <hello></hello>
-  </div>
+<template lang="pug">
+#app
+  hello
 </template>
