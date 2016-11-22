@@ -3,15 +3,15 @@ const expect = chai.expect
 const chaiAsPromised = require('chai-as-promised')
 chai.use(chaiAsPromised)
 import Vue from 'vue'
-import Hello from './Hello'
+import Hello from '../../src/app/components/Hello'
 Vue.use(require('vue-resource'))
 
 let response = {
   results: [
     {
       name: {
-        first: 'firstname',
-        last: 'lastname'
+        first: 'npn',
+        last: 'lkj'
       },
       gender: 'female',
       picture: {
@@ -53,20 +53,20 @@ describe('Auth', () => {
   })
 
   it('should work with async code', () => {
-    return vm.async(1).then((result) => {
+    return vm.getPeople(1).then((result) => {
       expect(vm.persons.length).to.be.eql(result)
       // console.log(vm.$el.querySelectorAll('.bob li')[0].querySelectorAll('.item .item_label')[0])
     })
   })
 
   it('should not be pending at the end', () => {
-    return vm.async(1).then((result) => {
+    return vm.getPeople(1).then((result) => {
       expect(vm.pending).to.be.equal(false)
     })
   })
 
   it('should filter correctly', () => {
-    return vm.async(1).then((result) => {
+    return vm.getPeople(1).then((result) => {
       vm.gender = 'female'
       expect(vm.filteredPeople.length).to.be.equal(1)
       vm.gender = 'male'

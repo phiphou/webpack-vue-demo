@@ -36,7 +36,7 @@ export default {
     }
   },
   methods: {
-    async (num) {
+    getPeople (num) {
       return new Promise((resolve, reject) => {
         this.$user.query({
           results: num
@@ -55,7 +55,7 @@ export default {
     reload () {
       this.ready = false
       this.pending = true
-      this.async(10)
+      this.getPeople(10)
     }
   },
   computed: {

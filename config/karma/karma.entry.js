@@ -7,3 +7,7 @@ var context = require.context('../../src/app', true, /\.js$/)
 context.keys().forEach(key => {
   if (exclude.indexOf(key) === -1) context(key)
 })
+var testContext = require.context('../../test/unit', true, /\.spec\.js$/)
+testContext.keys().forEach(key => {
+  if (exclude.indexOf(key) === -1) testContext(key)
+})
