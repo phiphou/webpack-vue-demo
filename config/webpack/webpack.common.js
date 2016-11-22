@@ -68,10 +68,6 @@ module.exports = {
             sass: ExtractTextPlugin.extract({
               loader: 'css-loader?sourceMap!postcss-loader!sass-loader',
               fallbackLoader: 'vue-style-loader' // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
-            }),
-            css: ExtractTextPlugin.extract({
-              loader: 'css-loader?sourceMap!postcss-loader',
-              fallbackLoader: 'vue-style-loader' // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
             })
           }
         }

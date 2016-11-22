@@ -14,7 +14,8 @@ module.exports = {
   },
   extends: 'standard',
   plugins: [
-    'html'
+    'html',
+    'pug'
   ],
   'rules': {
     'arrow-parens': 0,

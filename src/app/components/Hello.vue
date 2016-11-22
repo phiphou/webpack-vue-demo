@@ -1,39 +1,49 @@
-<template>
-  <div class="hello">
-    <button @click.prevent="reload()">Reload</button>
-    <label><input id="g_all" type="radio" value="all"  v-model="gender"> All</label>
-    <label><input id="g_male" type="radio" value="male" v-model="gender"> Male</label>
-    <label><input id="g_female" type="radio" value="female" v-model="gender"> Female</label>
-      <ul class="bob" v-show="!pending">
-        <li v-for="person in filteredPeople">
-          <div class="item">
-            <img :src="person.picture.thumbnail" class="item_avatar"></img>
-            <div class="item_label">{{person.name.first | capitalize}} {{person.name.last.toUpperCase()}}</div>
-          </div>
-        </li>
-      </ul>
-  </div>
+<template lang="pug">
+  .hello
+    button(@click.prevent='reload()') Reload
+    label
+      input#g_all(type='radio', value='all', v-model='gender')
+      | All
+    label
+      input#g_male(type='radio', value='male', v-model='gender')
+      | Male
+    label
+      input#g_female(type='radio', value='female', v-model='gender')
+      | Female
+    ul.bob(v-show='ready')
+      li(v-for='person in filteredPeople')
+        .item
+          img.item_avatar(:src='person.picture.thumbnail')
+          .item_label
+            | {{person.name.first | capitalize}} {{person.name.last.toUpperCase()}}
 </template>
+
 <script>
+// require('./style.sass')
+
 import Vue from 'vue'
+
 Vue.filter('capitalize', value => value.charAt(0).toUpperCase() + value.substr(1))
+
 export default {
   name: 'hello',
   data () {
     return {
       gender: 'all',
       persons: [],
+      ready: false,
       pending: false
     }
   },
   methods: {
-    getPeople (num) {
+    async (num) {
       return new Promise((resolve, reject) => {
         this.$user.query({
           results: num
         }).then(response => {
           response.json().then(data => {
             this.persons = data.results
+            this.ready = true
             this.pending = false
             resolve(num)
           })/* .catch(function (error) {
@@ -43,8 +53,9 @@ export default {
       })
     },
     reload () {
+      this.ready = false
       this.pending = true
-      this.getPeople(10)
+      this.async(10)
     }
   },
   computed: {
@@ -61,6 +72,4 @@ export default {
   }
 }
 </script>
-<style lang="sass">
-  @import "./style.sass";
-</style>
+<style lang='sass' src='./style.sass'></style>
