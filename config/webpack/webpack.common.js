@@ -79,7 +79,7 @@ module.exports = {
       },
       // support for font files
       {
-        test: /\.(woff2?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /-webfont\.(woff2?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader?publicPath=../&name=fonts/[name]-[hash:7].[ext]'
       },
       // support for .pug files

@@ -1,15 +1,22 @@
 <template lang="pug">
   .hello
-    button(@click.prevent='reload()') Reload
-    label
-      input#g_all(type='radio', value='all', v-model='gender')
-      | All
-    label
-      input#g_male(type='radio', value='male', v-model='gender')
-      | Male
-    label
-      input#g_female(type='radio', value='female', v-model='gender')
-      | Female
+    a.refresh(href='/', @click.prevent='reload()')
+      | Refresh
+
+    .container
+      ul
+        li
+          input#f-option(type='radio', name='s', v-model='gender', value='all')
+          label(for='f-option') All
+          .check
+        li
+          input#s-option(type='radio', name='s', v-model='gender', value='male')
+          label(for='s-option') Male
+          .check
+        li
+          input#t-option(type='radio', name='s', v-model='gender', value='female')
+          label(for='t-option') Female
+          .check
     ul.bob(v-show='ready')
       li(v-for='person in filteredPeople')
         .item
