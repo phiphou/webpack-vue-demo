@@ -244,8 +244,8 @@ async@^1.4.0, async@^1.5.0, async@^1.5.2, async@1.x:
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
 async@^2.0.1, async@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.1.2.tgz#612a4ab45ef42a70cde806bad86ee6db047e8385"
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.1.4.tgz#2d2160c7788032e4dd6cbe2502f1f9a2c8f6cde4"
   dependencies:
     lodash "^4.14.0"
 
@@ -1145,8 +1145,8 @@ browserslist@~1.4.0:
     caniuse-db "^1.0.30000539"
 
 buffer-crc32@~0.2.3:
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.9.tgz#3b09f0738e981546a3dcb36589b7918cba7bb65d"
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
 
 buffer-shims@^1.0.0:
   version "1.0.0"
@@ -1217,8 +1217,8 @@ camelcase@^3.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
 caniuse-db@^1.0.30000539, caniuse-db@^1.0.30000578:
-  version "1.0.30000584"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000584.tgz#cfbce897a48145fa73f96d893025581e838648c4"
+  version "1.0.30000585"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000585.tgz#9509aeb2bd1df72155cc7d80074f2ad79560ae28"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1821,8 +1821,8 @@ d@^0.1.1, d@~0.1.1:
     es5-ext "~0.10.2"
 
 dashdash@^1.12.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.0.tgz#29e486c5418bf0f356034a993d51686a33e84141"
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
   dependencies:
     assert-plus "^1.0.0"
 
@@ -1840,6 +1840,10 @@ dateformat@^1.0.6:
   dependencies:
     get-stdin "^4.0.1"
     meow "^3.3.0"
+
+de-indent@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
 
 debug@^2.1.1, debug@^2.2.0, debug@2:
   version "2.3.3"
@@ -2280,6 +2284,14 @@ eslint-plugin-html@^1.7.0:
 eslint-plugin-promise@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.4.0.tgz#6ba9048c2df57be77d036e0c68918bc9b4fc4195"
+
+eslint-plugin-pug@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-pug/-/eslint-plugin-pug-1.0.0.tgz#1728e5fe57181b71798d67a52db1d805de80350f"
+  dependencies:
+    pug-lexer "^1.0.0"
+    pug-parser "^1.0.0"
+    pug-walk-extract-text "^1.0.0"
 
 eslint-plugin-standard@^2.0.1:
   version "2.0.1"
@@ -2919,8 +2931,8 @@ got@5.6.0:
     url-parse-lax "^1.0.0"
 
 graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
-  version "4.1.10"
-  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.10.tgz#f2d720c22092f743228775c75e3612632501f131"
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
 graceful-fs@~2.0.0:
   version "2.0.3"
@@ -3036,7 +3048,7 @@ hawk@1.1.1:
     hoek "0.9.x"
     sntp "0.2.x"
 
-he@1.1.x:
+he@^1.1.0, he@1.1.x:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.0.tgz#29319d49beec13a9b1f3c4f9b2a6dde4859bb2a7"
 
@@ -3188,8 +3200,8 @@ https-proxy-agent@1:
     extend "3"
 
 iconv-lite@^0.4.5:
-  version "0.4.14"
-  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.14.tgz#0c4b78106835ecce149ffc7f1b588a9f23bf28e3"
+  version "0.4.15"
+  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb"
 
 iconv-lite@0.4.13:
   version "0.4.13"
@@ -3335,7 +3347,7 @@ is-equal-shallow@^0.1.3:
   dependencies:
     is-primitive "^2.0.0"
 
-is-expression@^2.0.1:
+is-expression@^2.0.0, is-expression@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-expression/-/is-expression-2.1.0.tgz#91be9d47debcfef077977e9722be6dcfb4465ef0"
   dependencies:
@@ -5116,8 +5128,8 @@ postcss-zindex@^2.0.1:
     uniqs "^2.0.0"
 
 postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.5:
-  version "5.2.5"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.5.tgz#ec428c27dffc7fac65961340a9b022fa4af5f056"
+  version "5.2.6"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.6.tgz#a252cd67cd52585035f17e9ad12b35137a7bdd9e"
   dependencies:
     chalk "^1.1.3"
     js-base64 "^2.1.9"
@@ -5244,6 +5256,14 @@ pug-filters@^1.2.4:
     resolve "^1.1.6"
     uglify-js "^2.6.1"
 
+pug-lexer@^1.0.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/pug-lexer/-/pug-lexer-1.2.0.tgz#895b5711a2298b7b1d0d6cfd389e57e7c6f54c40"
+  dependencies:
+    character-parser "^2.1.1"
+    is-expression "^2.0.0"
+    pug-error "^1.3.0"
+
 pug-lexer@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pug-lexer/-/pug-lexer-2.3.0.tgz#b841ac4cd8d27501281e0f9c88fb4243297aff3a"
@@ -5274,6 +5294,13 @@ pug-loader@^2.3.0:
     pug-walk "^1.0.0"
     resolve "^1.1.7"
 
+pug-parser@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pug-parser/-/pug-parser-1.0.0.tgz#09cf49bf3507f0243fe950cfeaae5c5edf66f425"
+  dependencies:
+    pug-error "^1.3.0"
+    token-stream "0.0.1"
+
 pug-parser@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pug-parser/-/pug-parser-2.0.1.tgz#dc2c5bbb777047e98359cd606860f75f4bfc1541"
@@ -5291,9 +5318,19 @@ pug-strip-comments@^1.0.1:
   dependencies:
     pug-error "^1.0.0"
 
+pug-walk-extract-text@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pug-walk-extract-text/-/pug-walk-extract-text-1.0.0.tgz#aa94a5f2e543f956d8682b312d0f894e3f3a2fc1"
+  dependencies:
+    pug-walk "0.0.3"
+
 pug-walk@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/pug-walk/-/pug-walk-1.0.0.tgz#7f4ae1456a4f18feee40a0d708b75c1c51d2e4e4"
+
+pug-walk@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/pug-walk/-/pug-walk-0.0.3.tgz#c28be7bcc540f24b83d274472410827c84e31ac6"
 
 pug@^2.0.0-beta6:
   version "2.0.0-beta6"
@@ -6264,8 +6301,8 @@ tar@^2.0.0, tar@^2.1.1, tar@~2.2.1:
     inherits "2"
 
 test-exclude@^3.2.2:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/test-exclude/-/test-exclude-3.2.2.tgz#bce1e739b668c00d71f6cd2c0ef292b8d23c22ae"
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/test-exclude/-/test-exclude-3.3.0.tgz#7a17ca1239988c98367b0621456dbb7d4bc38977"
   dependencies:
     arrify "^1.0.1"
     micromatch "^2.3.11"
@@ -6573,13 +6610,20 @@ vue-style-loader@^1.0.0:
   dependencies:
     loader-utils "^0.2.7"
 
+vue-template-compiler@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.1.0.tgz#b920111b239b2c4234a5ffd78ca42cb664f06559"
+  dependencies:
+    de-indent "^1.0.2"
+    he "^1.1.0"
+
 vue-template-es2015-compiler@^1.2.2:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.3.0.tgz#4a0f2a0bbef8b5731f78add8263cd86fe4f643ca"
 
-vue@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.0.8.tgz#bbc191db5e1442f208604f994f03e49ac09e69d2"
+vue@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.1.0.tgz#293ba3efaaca846aa6bcbfac45cf8524cc597e3d"
 
 watchpack@^1.0.0:
   version "1.1.0"
