@@ -17,6 +17,9 @@ module.exports = webpackMerge(commonConfig, {
     contentBase: path.resolve('src/public')
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    }),
     new webpack.LoaderOptionsPlugin({
       options: {
         eslint: {configFile: './.eslintrc.js'},

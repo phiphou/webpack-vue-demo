@@ -11,9 +11,6 @@ module.exports = webpackMerge(commonConfig, {
     path: path.resolve('./dist')
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
-    }),
     // Simply copies the files over
     new CopyWebpackPlugin([{
       from: 'src/public'

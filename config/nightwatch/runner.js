@@ -1,6 +1,6 @@
 // 1. start the dev server using production config
 process.env.NODE_ENV = 'testing'
-var server = require('./dev-server.js')
+var server = require('../dev-server.js')
 
 // 2. run the nightwatch test suite against it
 // to run in additional browsers:

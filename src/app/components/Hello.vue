@@ -8,6 +8,7 @@ export default {
   name: 'hello',
   data () {
     return {
+      environment: process.env.NODE_ENV,
       gender: 'all',
       persons: [],
       ready: false,
@@ -43,7 +44,7 @@ export default {
     }
   },
   mounted () {
-    this.$user = this.$resource('https://api.randomuser.me/')
+    this.$user = this.$resource(this.environment === 'development' ? 'http://localhost:8082/api/people/' : 'https://api.randomuser.me/')
     this.reload()
     Vue.nextTick(function () {
     // list is rendered

@@ -11,6 +11,7 @@ module.exports = {
       this.assert.equal(typeof title, 'string', 'Title is a string.')
       this.assert.equal(title, 'webpack-vue-demo', 'Title is the good one.')
     })
+    browser.pause(54000)
   },
   'Testing gender selection': function (browser) {
     browser.waitForElementVisible('ul.bob', 2000, function () {
