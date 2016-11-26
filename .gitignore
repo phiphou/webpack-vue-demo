@@ -1,13 +1,17 @@
+# node_modules
+node_modules
+
+#File system
 .DS_Store
 Thumbs.db
-node_modules
+
+#App
 dist
 coverage
-
 
 # Logs
 logs
 *.log
-npm-debug.log*
-
+npm-debug.log
+yarn-error.log
 test/e2e/reports/*
