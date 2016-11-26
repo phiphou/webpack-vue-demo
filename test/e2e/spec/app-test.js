@@ -7,27 +7,27 @@ module.exports = {
     browser.expect.element('.hello').to.have.css('display').which.equals('block')
     browser.assert.containsText('.hello a', 'Refresh', 'Testing refresh button')
     browser.expect.element('input[id=g_all').to.be.selected
-    browser.getTitle(function (title) {
+    browser.getTitle(title => {
       this.assert.equal(typeof title, 'string', 'Title is a string.')
       this.assert.equal(title, 'webpack-vue-demo', 'Title is the good one.')
     })
-    browser.pause(54000)
+    browser.pause(1)
   },
   'Testing gender selection': function (browser) {
-    browser.waitForElementVisible('ul.bob', 2000, function () {
+    browser.waitForElementVisible('ul.bob', 2000, () => {
       browser
-      .click('li label[id=g_male]', function (response) {
+      .click('li label[id=g_male]', response => {
         this.expect.element('li input[id=g_male]').to.be.selected
         this.assert.cssClassPresent('ul.bob li:nth-child(1) div img', 'male',
         'male class should be present in the first element.')
       })
-      .click('li label[id=g_female]', function (response) {
+      .click('li label[id=g_female]', response => {
         this.assert.cssClassNotPresent('ul.bob li:nth-child(1) div img', 'male',
         'male class should not be present anymore in the first element.')
         this.assert.cssClassPresent('ul.bob li:nth-child(1) div img', 'female',
         'female class should be present in the first element.')
       })
-      .click('li label[id=g_all]', function (response) {
+      .click('li label[id=g_all]', response => {
         this.expect.element('li input[id=g_all').to.be.selected
       })
     })

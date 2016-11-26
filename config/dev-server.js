@@ -1,6 +1,6 @@
 const express = require('express')
 const webpack = require('webpack')
-const webpackConfig = require('./webpack/webpack.dev')
+const webpackConfig = require('./webpack/webpack.prod')
 const opn = require('opn')
 const path = require('path')
 var port = process.env.PORT || 8082
@@ -12,10 +12,7 @@ app.use('/api', jsonServer.router(path.join(__dirname, '../test/mocks/db.json'))
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
-  stats: {
-    colors: true,
-    chunks: false
-  }
+  noInfo: true
 })
 
 // handle fallback for HTML5 history API
