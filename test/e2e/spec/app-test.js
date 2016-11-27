@@ -11,6 +11,7 @@ module.exports = {
       this.assert.equal(typeof title, 'string', 'Title is a string.')
       this.assert.equal(title, 'webpack-vue-demo', 'Title is the good one.')
     })
+    browser.assert.urlEquals('http://localhost:8082/')
     browser.pause(1)
   },
   'Testing gender selection': function (browser) {
