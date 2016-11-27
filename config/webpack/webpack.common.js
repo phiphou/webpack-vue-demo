@@ -8,7 +8,9 @@ const pkg = require('../../package.json')
 
 module.exports = {
   entry: {
-    'app': './src/app/main.js'
+    'app': [
+      './src/app/main.js'
+    ]
   },
   devtool: 'source-map',
   output: {

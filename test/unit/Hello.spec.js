@@ -3,7 +3,7 @@ const expect = chai.expect
 const chaiAsPromised = require('chai-as-promised')
 chai.use(chaiAsPromised)
 import Vue from 'vue'
-import Hello from '../../src/app/components/Hello'
+import Hello from '../../src/app/components/PeopleList/PeopleList'
 Vue.use(require('vue-resource'))
 
 let response = {
@@ -19,7 +19,7 @@ let response = {
       }
     }]
 }
-describe('Hello.vue', () => {
+describe('PeopleList.vue', () => {
   it('should be pending false before mount', () => {
     const defaultData = Hello.data().pending
     expect(defaultData).to.be.equal(false)
@@ -37,7 +37,7 @@ describe('Hello.vue', () => {
   })
 })
 
-describe('Auth', () => {
+describe('Call API', () => {
   const vm = new Vue(Hello).$mount()
 
   beforeEach(() => {

@@ -6926,9 +6926,9 @@ webpack-md5-hash@0.0.5:
   dependencies:
     md5 "^2.0.0"
 
-webpack-merge@^0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-0.18.0.tgz#287c737c18209d35ec5826e4ac69e9b2ed1e0564"
+webpack-merge@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-0.19.0.tgz#a5bd927e0c069d3ffe8b99c7f176a388a96aa5dd"
   dependencies:
     lodash.find "^3.2.1"
     lodash.isequal "^4.2.0"

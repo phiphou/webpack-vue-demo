@@ -1,14 +1,15 @@
-<template lang="pug" src="./Hello.tpl.pug"></template>
+<template lang="pug" src="./PeopleList.tpl.pug"></template>
 <script>
 import Vue from 'vue'
 
 Vue.filter('capitalize', value => value.charAt(0).toUpperCase() + value.substr(1))
 
 export default {
-  name: 'hello',
+  name: 'PeopleList',
   data () {
     return {
       environment: process.env.NODE_ENV,
+      API_endPoint: process.env.API_endPoint,
       gender: 'all',
       persons: [],
       ready: false,
@@ -44,7 +45,8 @@ export default {
     }
   },
   mounted () {
-    this.$user = this.$resource(this.environment === 'development' ? 'http://localhost:8082/api/people/' : 'https://api.randomuser.me/')
+    console.log(this.API_endPoint)
+    this.$user = this.$resource(this.API_endPoint)
     this.reload()
     Vue.nextTick(function () {
     // list is rendered

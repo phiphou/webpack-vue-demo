@@ -1,8 +1,9 @@
 module.exports = {
   'Testing first load': function (browser) {
-    const devServer = browser.globals.devServerURL
+    // const devServer = browser.globals.devServerURL
     browser
-      .url(devServer).waitForElementVisible('body', 1000)
+      .url('http://localhost:8082/#/peopleList').waitForElementVisible('body', 1000)
+      .pause(150)
       .assert.elementPresent('.hello', 'Testing .hello presence.')
     browser.expect.element('.hello').to.have.css('display').which.equals('block')
     browser.assert.containsText('.hello a', 'Refresh', 'Testing refresh button')
@@ -11,8 +12,7 @@ module.exports = {
       this.assert.equal(typeof title, 'string', 'Title is a string.')
       this.assert.equal(title, 'webpack-vue-demo', 'Title is the good one.')
     })
-    browser.assert.urlEquals('http://localhost:8082/')
-    browser.pause(1)
+    browser.assert.urlEquals('http://localhost:8082/#/peopleList')
   },
   'Testing gender selection': function (browser) {
     browser.waitForElementVisible('ul.bob', 2000, function () {
