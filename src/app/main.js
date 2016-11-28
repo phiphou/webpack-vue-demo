@@ -8,10 +8,12 @@ require('../style/style.sass')
 Vue.use(VueRouter)
 Vue.use(Vueresource)
 
+const about = () => require.ensure([], () => require('./components/About/About.vue'), 'About')
+
 const routes = [
   { path: '/home', component: require('./components/Home/Home') },
   { path: '/peopleList', component: require('./components/PeopleList/PeopleList') },
-  { path: '/about', component: require('./components/About/About') },
+  { path: '/about', component: about },
   { path: '/', redirect: '/home' }
 ]
 

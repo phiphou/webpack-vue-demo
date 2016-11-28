@@ -14,7 +14,8 @@ module.exports = {
   },
   devtool: 'source-map',
   output: {
-    filename: 'js/[name]-[chunkhash:7].js'
+    filename: 'js/[name]-[chunkhash:7].js',
+    chunkFilename: 'js/[name]-[chunkhash:7].js'
   },
   // Reference: http://webpack.github.io/docs/configuration.html#resolve
   resolve: {

@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/phiphou/webpack-vue-demo/issues"
   },
-  "description": "A small demo that shows how to use webpack and VueJS.",
+  "description": "A small demo that shows how to use webpack and VueJs.",
   "scripts": {
     "postinstall": "node ./node_modules/selenium-standalone/bin/selenium-standalone install",
     "start": "node ./config/dev-server",
@@ -73,7 +73,7 @@
     "selenium-standalone": "^5.8.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "vue-loader": "^10.0.1",
+    "vue-loader": "^10.0.2",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.3",
     "vue-style-loader": "^1.0.0",
@@ -82,7 +82,7 @@
     "webpack-dev-middleware": "^1.8.4",
     "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-md5-hash": "0.0.5",
-    "webpack-merge": "^0.20.0"
+    "webpack-merge": "^1.0.1"
   },
   "dependencies": {
     "babel-polyfill": "^6.16.0",
