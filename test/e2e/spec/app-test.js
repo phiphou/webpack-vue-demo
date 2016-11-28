@@ -1,9 +1,18 @@
 module.exports = {
-  'Testing first load': function (browser) {
+  'Testing About page': function (browser) {
+    browser
+      .url('http://localhost:8082/#/about')
+      .waitForElementVisible('body', 1000)
+      .assert.urlEquals('http://localhost:8082/#/about')
+      .assert.cssClassPresent('.menu li.about > a', 'router-link-active')
+      .assert.containsText('#about', 'About')
+  },
+
+  'Testing peopleList route': function (browser) {
     // const devServer = browser.globals.devServerURL
     browser
-      .url('http://localhost:8082/#/peopleList').waitForElementVisible('body', 1000)
-      .pause(150)
+      .url('http://localhost:8082/#/peopleList')
+      .waitForElementVisible('body', 1000)
       .assert.elementPresent('.hello', 'Testing .hello presence.')
     browser.expect.element('.hello').to.have.css('display').which.equals('block')
     browser.assert.containsText('.hello a', 'Refresh', 'Testing refresh button')
@@ -14,6 +23,7 @@ module.exports = {
     })
     browser.assert.urlEquals('http://localhost:8082/#/peopleList')
   },
+
   'Testing gender selection': function (browser) {
     browser.waitForElementVisible('ul.bob', 2000, function () {
       browser

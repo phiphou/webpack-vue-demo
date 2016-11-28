@@ -17,7 +17,10 @@ module.exports = webpackMerge(commonConfig, {
     }),
     // Simply copies the files over
     new CopyWebpackPlugin([{
-      from: 'src/public'
+      from: 'src/public/'
+    }, {
+      from: 'src/assets/favicons/',
+      to: 'assets/favicons/'
     }], {
       ignore: ['*.pug', 'Thumbs.db']
     }),

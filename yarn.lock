@@ -4122,6 +4122,10 @@ lodash.isequal@^4.2.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.4.0.tgz#6295768e98e14dc15ce8d362ef6340db82852031"
 
+lodash.isfunction@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.8.tgz#4db709fc81bc4a8fd7127a458a5346c5cdce2c6b"
+
 lodash.isplainobject@^3.0.0, lodash.isplainobject@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-3.2.0.tgz#9a8238ae16b200432960cd7346512d0123fbf4c5"
@@ -6856,6 +6860,10 @@ vue-resource@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/vue-resource/-/vue-resource-1.0.3.tgz#8d52d0d8a9ed5f2ae704c68d530c84ceaf97be14"
 
+vue-router@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-2.0.3.tgz#444e246fd42d65a34dea6c3be8fde3315c4ba6f7"
+
 vue-style-loader@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-1.0.0.tgz#abeb7bd0f46313083741244d3079d4f14449e049"
@@ -6926,12 +6934,13 @@ webpack-md5-hash@0.0.5:
   dependencies:
     md5 "^2.0.0"
 
-webpack-merge@^0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-0.19.0.tgz#a5bd927e0c069d3ffe8b99c7f176a388a96aa5dd"
+webpack-merge@^0.20.0:
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-0.20.0.tgz#e4b73429517181a287c59c8cafef5fc9eb1d9705"
   dependencies:
     lodash.find "^3.2.1"
     lodash.isequal "^4.2.0"
+    lodash.isfunction "^3.0.8"
     lodash.isplainobject "^3.2.0"
     lodash.merge "^3.3.2"
 

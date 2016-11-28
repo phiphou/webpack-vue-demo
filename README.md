@@ -1,7 +1,7 @@
 [![CircleCI](https://img.shields.io/circleci/project/phiphou/webpack-vue-demo.svg?maxAge=0)](https://circleci.com/gh/phiphou/webpack-vue-demo)
 [![GitHub version](https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo.svg)](https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo)
 [![Dependency Status](https://david-dm.org/phiphou/webpack-vue-demo.svg)](https://david-dm.org/phiphou/webpack-vue-demo)
-[![devDependency Status](https://david-dm.org/phiphou/webpack-vue-demo/dev-status.svg)](https://david-dm.org/phiphou/webpack-vue-demo#info=devDependencies)
+[![devDependency Status](https://david-dm.org/phiphou/webpack-vue-demo/dev-status.svg)](https://david-dm.org/phiphou/webpack-vue-demo?type=dev)
 [![codecov](https://codecov.io/gh/phiphou/webpack-vue-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/phiphou/webpack-vue-demo)
 [![MIT license](https://img.shields.io/badge/Licence-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 [![Size](https://reposs.herokuapp.com/?path=phiphou/webpack-vue-demo)](#)

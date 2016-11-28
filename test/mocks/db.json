@@ -12,29 +12,11 @@
     }, {
       "gender": "male",
       "name": {
-        "first": "vilho",
-        "last": "erkkila"
-      },
-      "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/95.jpg"
-      }
-    }, {
-      "gender": "male",
-      "name": {
         "first": "tony",
         "last": "dubois"
       },
       "picture": {
         "thumbnail": "https://randomuser.me/api/portraits/thumb/men/33.jpg"
-      }
-    }, {
-      "gender": "male",
-      "name": {
-        "first": "matias",
-        "last": "moilanen"
-      },
-      "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/22.jpg"
       }
     }, {
       "gender": "female",
@@ -44,6 +26,15 @@
       },
       "picture": {
         "thumbnail": "https://randomuser.me/api/portraits/thumb/women/34.jpg"
+      }
+    }, {
+      "gender": "male",
+      "name": {
+        "first": "vilho",
+        "last": "erkkila"
+      },
+      "picture": {
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/95.jpg"
       }
     }, {
       "gender": "female",
@@ -64,31 +55,13 @@
         "thumbnail": "https://randomuser.me/api/portraits/thumb/women/85.jpg"
       }
     }, {
-      "gender": "female",
-      "name": {
-        "first": "natalia",
-        "last": "parra"
-      },
-      "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/36.jpg"
-      }
-    }, {
-      "gender": "female",
-      "name": {
-        "first": "victoria",
-        "last": "porter"
-      },
-      "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/21.jpg"
-      }
-    }, {
       "gender": "male",
       "name": {
-        "first": "oliver",
-        "last": "roy"
+        "first": "matias",
+        "last": "moilanen"
       },
       "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/79.jpg"
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/22.jpg"
       }
     }]
   }

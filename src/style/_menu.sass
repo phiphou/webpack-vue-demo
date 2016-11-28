@@ -1,5 +1,6 @@
 .menu
   display: flex
+  border-bottom: solid 1px #CFCFCF;
   ul, li
     margin: 0
     padding: 0
@@ -12,16 +13,19 @@
     float: left
     position: relative
     width: auto
-  a
-    background: #5e8c90
-    color: #FFFFFF
-    display: block
-    font: bold 14px/20px sans-serif
-    padding: 5px 25px
-    text-align: center
-    text-decoration: none
-    transition: all .25s ease
-  a.router-link-active
-    background: #0db1a2
-  li:hover a
-    background: #16a085
+    border-left: solid 1px white
+    &:first-child
+     border-left: none
+    a
+      background: #5e8c90
+      color: #FFFFFF
+      display: block
+      font: bold 14px/20px sans-serif
+      padding: 5px 25px
+      text-align: center
+      text-decoration: none
+      transition: all .25s ease
+    .router-link-active
+      background: #33995e
+      &:hover
+        background: #16a085

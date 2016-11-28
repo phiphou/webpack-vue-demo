@@ -17,11 +17,11 @@ export default {
 #app
   nav.menu
     ul
-      li
+      li.home
         router-link(to='/home') Home
-      li
+      li.peopleList
         router-link(to='/peopleList') People list
-      li
+      li.about
         router-link(to='/about') About
   router-view.router-view
 </template>

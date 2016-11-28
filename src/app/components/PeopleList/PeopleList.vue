@@ -45,7 +45,6 @@ export default {
     }
   },
   mounted () {
-    console.log(this.API_endPoint)
     this.$user = this.$resource(this.API_endPoint)
     this.reload()
     Vue.nextTick(function () {
