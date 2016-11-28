@@ -15,7 +15,6 @@ module.exports = {
       .waitForElementVisible('body', 1000)
       .assert.elementPresent('.hello', 'Testing .hello presence.')
     browser.expect.element('.hello').to.have.css('display').which.equals('block')
-    browser.assert.containsText('.hello a', 'Refresh', 'Testing refresh button')
     browser.expect.element('input[id=g_all').to.be.selected
     browser.getTitle(function (title) {
       this.assert.equal(typeof title, 'string', 'Title is a string.')
