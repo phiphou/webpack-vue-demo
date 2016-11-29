@@ -7,7 +7,7 @@ Thumbs.db
 
 #App
 dist
-coverage
+reports
 
 # Logs
 logs
