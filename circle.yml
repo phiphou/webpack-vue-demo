@@ -11,5 +11,5 @@ test:
     - npm run prod
     - bash <(curl -s https://codecov.io/bash)
     - npm run e2e
+    - cp ./reports/unit/junit/test-results.xml ${CIRCLE_TEST_REPORTS}
     - mv ./reports ${CIRCLE_ARTIFACTS}
-    - mv ./reports/unit/junit ${CIRCLE_TEST_REPORTS}
