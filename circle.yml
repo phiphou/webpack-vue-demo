@@ -13,4 +13,4 @@ test:
     - bash <(curl -s https://codecov.io/bash)
     - npm run e2e
     - mv ./test/e2e/reports ${CIRCLE_ARTIFACTS}
-    - mv ./reports/junit ${CIRCLE_TEST_REPORTS}/junit/test-results.xml
+    - mv ./reports/junit ${CIRCLE_TEST_REPORTS}
