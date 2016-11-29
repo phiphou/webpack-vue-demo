@@ -6,7 +6,7 @@
     "test": {
       "plugins": [
         ["istanbul", {"exclude": [
-          "src/**/*.spec.js",
+          "test/**/*.spec.js",
           "config/karma/karma.entry.js"
         ]}]
       ]

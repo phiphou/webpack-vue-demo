@@ -6,7 +6,7 @@ module.exports = {
   'output_folder': projectRoot + '/reports/e2e/',
   'custom_commands_path': '',
   'custom_assertions_path': '',
-  'globals_path': '',
+  'globals_path': 'config/nightwatch/globals.js',
   'selenium': {
     'start_process': true,
     'server_path': './node_modules/selenium-standalone/.selenium/selenium-server/2.53.1-server.jar',
