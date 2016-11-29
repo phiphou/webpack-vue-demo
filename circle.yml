@@ -9,8 +9,7 @@ dependencies:
 test:
   post:
     - npm run prod
-    - mv ./reports/coverage ${CIRCLE_ARTIFACTS}
     - bash <(curl -s https://codecov.io/bash)
     - npm run e2e
-    - mv ./test/e2e/reports ${CIRCLE_ARTIFACTS}
-    - mv ./reports/junit ${CIRCLE_TEST_REPORTS}
+    - mv ./reports ${CIRCLE_ARTIFACTS}
+    - mv ./reports/unit/junit ${CIRCLE_TEST_REPORTS}

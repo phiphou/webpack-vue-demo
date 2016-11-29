@@ -3,14 +3,14 @@ const projectRoot = process.cwd()
 // http://nightwatchjs.org/guide#settings-file
 module.exports = {
   'src_folders': [projectRoot + '/test/e2e/spec'],
-  'output_folder': projectRoot + '/test/e2e/reports',
+  'output_folder': projectRoot + '/reports/e2e/',
   'custom_commands_path': '',
   'custom_assertions_path': '',
   'globals_path': '',
   'selenium': {
     'start_process': true,
     'server_path': './node_modules/selenium-standalone/.selenium/selenium-server/2.53.1-server.jar',
-    'log_path': projectRoot + '/test/e2e/reports',
+    'log_path': projectRoot + '/reports/e2e/',
     'host': '127.0.0.1',
     'port': 4444,
     'cli_args': {
@@ -26,7 +26,7 @@ module.exports = {
       'silent': true,
       'screenshots': {
         'enabled': true,
-        'path': projectRoot + '/test/e2e/reports/screenshots',
+        'path': projectRoot + '/reports/e2e/screenshots',
         'on_failure': true,
         'on_error': true
       },

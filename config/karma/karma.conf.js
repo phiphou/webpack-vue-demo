@@ -1,3 +1,5 @@
+const pkg = require('../../package.json')
+
 module.exports = config => {
   config.set({
     autoWatch: false,
@@ -51,12 +53,22 @@ module.exports = config => {
       'karma-chai-as-promised',
       'karma-sourcemap-loader',
       'karma-mocha-reporter',
-      'karma-junit-reporter'
+      'karma-junit-reporter',
+      'karma-htmlfile-reporter'
     ],
     preprocessors: {'./karma.entry.js': ['webpack']},
-    reporters: ['mocha', 'coverage', 'junit'],
+    reporters: ['mocha', 'html', 'junit', 'coverage'],
+    htmlReporter: {
+      outputFile: '../../reports/unit/html/unit_tests_report.html',
+      // Optional
+      pageTitle: pkg.name + ' - Unit Tests',
+      subPageTitle: pkg.description,
+      groupSuites: true,
+      useCompactStyle: false,
+      useLegacyStyle: false
+    },
     junitReporter: {
-      outputFile: '../../../reports/junit/test-results.xml'
+      outputFile: '../../../reports/unit/junit/test-results.xml'
     },
     singleRun: true,
     webpack: require('../webpack/webpack.test'),
