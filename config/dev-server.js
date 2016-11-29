@@ -1,28 +1,20 @@
-var WebpackDevServer = require('webpack-dev-server')
-var webpack = require('webpack')
+const WebpackDevServer = require('webpack-dev-server')
+const webpack = require('webpack')
 const webpackConfig = require('./webpack/webpack.dev')
 const path = require('path')
 const express = require('express')
 const opn = require('opn')
-var port = process.env.PORT || 8082
-
+const port = process.env.PORT || 8082
+const compiler = webpack(webpackConfig)
 webpackConfig.entry.app.unshift('webpack-dev-server/client?http://localhost:8082/')
-var compiler = webpack(webpackConfig)
-var server = new WebpackDevServer(compiler, {
-  // webpack-dev-server options
-
+const server = new WebpackDevServer(compiler, {
   contentBase: path.resolve('/'),
   historyApiFallback: true,
-  setup: function (app) {
+  setup: app => {
     var jsonServer = require('json-server')
     app.use('/assets', express.static(path.join(__dirname, '../src/assets/')))
     app.use('/api', jsonServer.router(path.join(__dirname, '../test/mocks/db.json')))
   },
-
-  // pass [static options](http://expressjs.com/en/4x/api.html#express.static) to inner express server
-  staticOptions: {
-  },
-
   clientLogLevel: 'info',
   quiet: false,
   inline: true,
@@ -32,18 +24,30 @@ var server = new WebpackDevServer(compiler, {
     poll: 1000
   },
   publicPath: webpackConfig.output.publicPath,
-  stats: { colors: true }
+  stats: {
+    colors: true,
+    hash: true,
+    version: true,
+    timings: true,
+    assets: false,
+    chunks: true,
+    chunkModules: false,
+    modules: false,
+    children: false,
+    cached: false,
+    reasons: true,
+    source: false,
+    errorDetails: true,
+    chunkOrigins: false
+  }
 })
-
-module.exports = server.listen(port, function (err) {
+module.exports = server.listen(port, err => {
   if (err) {
     console.log(err)
     return
   }
   var uri = 'http://localhost:' + port
   console.log('Listening at ' + uri + '\n')
-
-  // when env is testing, don't need open it
   if (process.env.NODE_ENV !== 'testing') {
     opn(uri)
   }

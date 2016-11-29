@@ -26,20 +26,20 @@ module.exports = {
   'Testing gender selection': function (browser) {
     browser.waitForElementVisible('ul.bob', 2000, function () {
       browser
-      .click('li label[id=g_male]', function (response) {
-        this.expect.element('li input[id=g_male]').to.be.selected
-        this.assert.cssClassPresent('ul.bob li:nth-child(1) div img', 'male',
-        'male class should be present in the first element.')
-      })
-      .click('li label[id=g_female]', function (response) {
-        this.assert.cssClassNotPresent('ul.bob li:nth-child(1) div img', 'male',
-        'male class should not be present anymore in the first element.')
-        this.assert.cssClassPresent('ul.bob li:nth-child(1) div img', 'female',
-        'female class should be present in the first element.')
-      })
-      .click('li label[id=g_all]', function (response) {
-        this.expect.element('li input[id=g_all').to.be.selected
-      })
+        .click('li label[id=g_male]', function (response) {
+          this.expect.element('li input[id=g_male]').to.be.selected
+          this.assert.cssClassPresent('ul.bob li:nth-child(1) div img', 'male',
+            'male class should be present in the first element.')
+        })
+        .click('li label[id=g_female]', function (response) {
+          this.assert.cssClassNotPresent('ul.bob li:nth-child(1) div img', 'male',
+            'male class should not be present anymore in the first element.')
+          this.assert.cssClassPresent('ul.bob li:nth-child(1) div img', 'female',
+            'female class should be present in the first element.')
+        })
+        .click('li label[id=g_all]', function (response) {
+          this.expect.element('li input[id=g_all').to.be.selected
+        })
     })
     browser.pause(1).end()
   }

@@ -13,13 +13,13 @@ export default {
 
 <template lang="pug">
 #app
-  nav.menu
-    ul
-      li.home
-        router-link(to='/home') Home
-      li.peopleList
-        router-link(to='/peopleList') People list
-      li.about
-        router-link(to='/about') About
-  router-view.router-view
+	nav.menu
+		ul
+			li.home
+				router-link(to='/home') Home
+			li.peopleList
+				router-link(to='/peopleList') People list
+			li.about
+				router-link(to='/about') About
+	router-view.router-view
 </template>
