@@ -3,7 +3,7 @@ module.exports = config => {
     autoWatch: false,
     browsers: process.env.CIRCLE_ENV ? ['PhantomJS'] : ['Chrome'],
     coverageReporter: {
-      dir: '../../coverage',
+      dir: '../../reports/coverage',
       reporters: process.env.CIRCLE_ENV
         ? [ {type: 'html'},
             {type: 'text-summary'},
@@ -50,10 +50,14 @@ module.exports = config => {
       'karma-chai',
       'karma-chai-as-promised',
       'karma-sourcemap-loader',
-      'karma-mocha-reporter'
+      'karma-mocha-reporter',
+      'karma-junit-reporter'
     ],
     preprocessors: {'./karma.entry.js': ['webpack']},
-    reporters: ['mocha', 'coverage'],
+    reporters: ['mocha', 'coverage', 'junit'],
+    junitReporter: {
+      outputFile: '../../../reports/junit/test-results.xml'
+    },
     singleRun: true,
     webpack: require('../webpack/webpack.test'),
     webpackServer: {noInfo: true}
