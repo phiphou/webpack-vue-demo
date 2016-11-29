@@ -12,7 +12,7 @@ module.exports = {
     // const devServer = browser.globals.devServerURL
     browser
       .url('http://localhost:8082/#/peopleList')
-      .waitForElementVisible('body', 1000)
+      .waitForElementVisible('.hello', 1000)
       .assert.elementPresent('.hello', 'Testing .hello presence.')
     browser.expect.element('.hello').to.have.css('display').which.equals('block')
     browser.expect.element('input[id=g_all').to.be.selected
