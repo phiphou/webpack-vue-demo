@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Phiphou> -- <author> -- <@__phiphou__>
+
+# TECHNOLOGY COLOPHON
+
+    VueJs, Vue-resource, Vue-router
+    Webpack, ES6, CSS3, SASS, HTML5
+    Karma, Mocha, Chai, Nightwatch, Coverage

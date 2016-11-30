@@ -8,7 +8,7 @@
 
 # webpack-vue-demo
 
-A very basic but complete demo project that use [VueJs](http://babeljs.io/) as front-end framework, [Babel](http://babeljs.io/) for [ES6](http://www.ecma-international.org/ecma-262/6.0/) transpilation, [Webpack2](http://webpack.github.io/) as module loader, [SASS](http://sass-lang.com/) as a CSS preprocessor, [Karma](https://karma-runner.github.io/1.0/), [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/) for unit tests, [nightwatch](http://nightwatchjs.org/) for e2e tests and finally [Istanbul](https://github.com/gotwarlost/istanbul) for code coverage.
+A very basic but complete demo project that use [VueJs](http://babeljs.io/) as front-end framework (with [Vue-resource](https://github.com/pagekit/vue-resource) and [Vue-router](https://github.com/vuejs/vue-router)), [Babel](http://babeljs.io/) for [ES6](http://www.ecma-international.org/ecma-262/6.0/) transpilation, [Webpack2](http://webpack.github.io/) as module loader, [SASS](http://sass-lang.com/) as a CSS preprocessor, [Karma](https://karma-runner.github.io/1.0/), [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/) for unit tests, [nightwatch](http://nightwatchjs.org/) for e2e tests and finally [Istanbul](https://github.com/gotwarlost/istanbul) for code coverage.
 
 ## Quick Start
 
@@ -80,6 +80,7 @@ You'll find your build in the `./dist` directory
 ##### Unit-tests
 
 [Karma](https://karma-runner.github.io/0.13/index.html) is used as test-runner, you can configure it in the [`./config/karma/karma.conf.js`](/config/karma/karma.conf.js) file.
+
 You can run tests by just typing :
 
 ```bash
@@ -87,6 +88,8 @@ $ npm run test
 ```
 
 Tests are written in ES6 for [Mocha](http://mochajs.org/) and use [Chai](http://chaijs.com/) and [chai-as-promised](http://chaijs.com/plugins/chai-as-promised/).
+
+Reports are available in the `./reports/unit` folder, in [JUnit](http://junit.org/junit4/) format and HTML report.
 
 ##### E2E-tests
 
@@ -104,13 +107,13 @@ Chrome brower is used as default config, but you can override this by running:
 $ npm run e2e -- --env [chrome],[firefox]
 ```
 
-Reports are available in the `./test/e2e/reports` folder. In case of failed test(s), you'll find screenshots in the `./test/e2e/reports/screenshots` folder.
+Reports are available in the `./reports/e2e` folder. In case of failed test(s), you'll find screenshots in the `./reports/e2e/screenshots` folder.
 
 ##### Code coverage
 
 [Istanbul](https://github.com/gotwarlost/istanbul) is used as code coverage tool. You can configure it in the [`./config/karma/karma.conf.js`](/config/karma/karma.conf.js) file.
 
-It will produce reports you'll find in the `./coverage` folder each time you run unit-tests.
+It will produce reports you'll find in the `./reports/coverage` folder each time you run unit-tests.
 
 ## License
 

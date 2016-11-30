@@ -22,5 +22,5 @@ export default {
       li.about
         router-link(to='/about') About
   transition(name='fade', mode='out-in')
-    router-view
+    router-view.router-view
 </template>

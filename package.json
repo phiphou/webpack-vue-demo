@@ -14,8 +14,8 @@
   "description": "A small demo that shows how to use webpack and VueJs.",
   "scripts": {
     "postinstall": "node ./node_modules/selenium-standalone/bin/selenium-standalone install",
-    "start": "node ./config/dev-server",
-    "prod": "rimraf dist && cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.prod.js --profile --colors --display-error-details",
+    "start": "cross-env NODE_ENV=development node ./config/dev-server",
+    "prod": "rimraf dist && cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.prod.js --profile --colors --display-error-details --bail",
     "test": "rimraf reports/unit reports/coverage && cross-env NODE_ENV=test karma start ./config/karma/karma.conf.js --single-run --slow 0 -d --log-timer-events",
     "e2e": "rimraf reports/e2e && cross-env PORT=8082 node config/nightwatch/runner.js"
   },
@@ -36,7 +36,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^3.1.3",
     "css-loader": "^0.26.0",
-    "eslint": "^3.11.0",
+    "eslint": "^3.11.1",
     "eslint-config-standard": "^6.2.1",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^1.7.0",
@@ -50,7 +50,7 @@
     "html-webpack-plugin": "^2.24.1",
     "imports-loader": "^0.6.5",
     "json-loader": "^0.5.4",
-    "json-server": "^0.9.1",
+    "json-server": "^0.9.2",
     "karma": "~1.3.0",
     "karma-babel-preprocessor": "^6.0.1",
     "karma-chai": "^0.1.0",
@@ -83,12 +83,12 @@
     "webpack-dev-middleware": "^1.8.4",
     "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-md5-hash": "0.0.5",
-    "webpack-merge": "^1.0.1"
+    "webpack-merge": "^1.0.2"
   },
   "dependencies": {
     "babel-polyfill": "^6.16.0",
     "vue": "^2.1.3",
     "vue-resource": "^1.0.3",
-    "vue-router": "^2.0.3"
+    "vue-router": "^2.1.0"
   }
 }

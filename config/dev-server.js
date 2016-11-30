@@ -47,7 +47,7 @@ module.exports = server.listen(port, err => {
     return
   }
   var uri = 'http://localhost:' + port
-  console.log('Listening at ' + uri + '\n')
+  console.log(`Listening at ${uri}\n`)
   if (process.env.NODE_ENV !== 'testing') {
     opn(uri)
   }

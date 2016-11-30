@@ -7,6 +7,7 @@ require('../style/style.sass')
 
 Vue.use(VueRouter)
 Vue.use(Vueresource)
+Vue.config.devtools = process.env.NODE_ENV === 'development'
 
 const about = () => require.ensure([], () => require('./components/About/About'), 'About')
 

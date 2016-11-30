@@ -12,15 +12,15 @@ module.exports = webpackMerge(commonConfig, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('prod'),
+      'process.env.NODE_ENV': JSON.stringify('production'),
       'process.env.API_endPoint': JSON.stringify('https://api.randomuser.me/')
     }),
     // Simply copies the files over
     new CopyWebpackPlugin([{
       from: 'src/public'
     }, {
-      from: 'src/assets/favicons/',
-      to: 'assets/favicons/'
+      from: 'src/assets/',
+      to: 'assets/'
     }], {
       ignore: ['*.pug', 'Thumbs.db']
     }),

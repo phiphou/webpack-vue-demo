@@ -1,5 +1,4 @@
 const pkg = require('../../package.json')
-
 module.exports = config => {
   config.set({
     autoWatch: false,
@@ -59,8 +58,7 @@ module.exports = config => {
     preprocessors: {'./karma.entry.js': ['webpack']},
     reporters: ['mocha', 'html', 'junit', 'coverage'],
     htmlReporter: {
-      outputFile: '../../reports/unit/html/unit_tests_report.html',
-      // Optional
+      outputFile: '../../reports/unit/unit_tests_report.html',
       pageTitle: pkg.name + ' - Unit Tests',
       subPageTitle: pkg.description,
       groupSuites: true,
@@ -68,7 +66,7 @@ module.exports = config => {
       useLegacyStyle: false
     },
     junitReporter: {
-      outputFile: '../../../reports/unit/junit/test-results.xml'
+      outputFile: '../../../reports/unit/test-results.xml'
     },
     singleRun: true,
     webpack: require('../webpack/webpack.test'),

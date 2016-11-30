@@ -45,7 +45,9 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: [['es2015', {'modules': false}], 'stage-2']
+          presets: [['es2015', {
+            'modules': false
+          }], 'stage-2']
         }
       },
       {
@@ -77,7 +79,7 @@ module.exports = {
       },
       // support for image files
       {
-        test: /^((?!font).)*\.(png|jpe?g|gif|svg)$/,
+        test: /^((?!font).)*\.(jpe?g|png|gif|svg)$/,
         loader: 'file-loader?publicPath=../&name=assets/img/[name]-[hash:7].[ext]'
       },
       // support for font files
