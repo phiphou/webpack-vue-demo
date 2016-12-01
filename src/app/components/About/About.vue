@@ -1,8 +1,9 @@
-<template>
-  <div id='about'><h1>About</h1></div>
+<template lang='pug'>
+#about
+  h1 About
 </template>
 <script>
 export default {
-  name: 'foo'
+  name: 'About'
 }
 </script>
