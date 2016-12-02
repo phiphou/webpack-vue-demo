@@ -56,7 +56,7 @@ $ yarn
 
 ## Usage
 
-#### Start developping
+### Start developping
 
 Dive into development right now by just running:
 ```bash
@@ -65,7 +65,7 @@ $ npm run start
 
 This will pre-build the application, start webpack's dev server and open your browser at [http://127.0.0.1:8080](http://127.0.0.1:8080). Then, have a look at [`./src/app/main.js`](https://github.com/phiphou/webpack-vue-demo/blob/master/src/app/main.js).
 
-#### Building
+### Building
 
 You can build the app and get a "ready to deploy" release by just running:
 
@@ -75,9 +75,9 @@ $ npm run prod
 
 You'll find your build in the `./dist` directory
 
-#### Testing
+### Testing
 
-##### Unit-tests
+#### Unit-tests
 
 [Karma](https://karma-runner.github.io/0.13/index.html) is used as test-runner, you can configure it in the [`./config/karma/karma.conf.js`](/config/karma/karma.conf.js) file.
 
@@ -89,11 +89,13 @@ $ npm run test
 
 Tests are written in ES6 for [Mocha](http://mochajs.org/) and use [Chai](http://chaijs.com/) and [chai-as-promised](http://chaijs.com/plugins/chai-as-promised/).
 
-Reports are available in the `./reports/unit` folder, in [JUnit](http://junit.org/junit4/) format and HTML report.
+Unit-tests are located in the `./test/unit/` folder and reports are available in the `./reports/unit` folder, in [JUnit](http://junit.org/junit4/) format and HTML report.
 
-##### E2E-tests
+#### E2E-tests
 
 [NightwatchJs](https://www.nightwatchjs.org) is used as E2E-tests test-runner, you can configure it in the [`./config/nightwatch.js`](/config/nightwatch.js) file.
+
+E2E-tests are located in the `./test/e2e/` folder.
 
 You can run e2e tests by just typing :
 
@@ -101,19 +103,19 @@ You can run e2e tests by just typing :
 $ npm run e2e
 ```
 
-Chrome brower is used as default config, but you can override this by running:
+Chrome browser is used as default config, but you can override this by running:
 
 ```bash
 $ npm run e2e -- --env [chrome],[firefox]
 ```
 
-Reports are available in the `./reports/e2e` folder. In case of failed test(s), you'll find screenshots in the `./reports/e2e/screenshots` folder.
+Reports are available in the `./reports/e2e` folder in [JUnit](http://junit.org/junit4/) format and HTML report. In case of failed test(s), you'll find screenshots in the `./reports/e2e/screenshots` folder.
 
-##### Code coverage
+#### Code coverage
 
 [Istanbul](https://github.com/gotwarlost/istanbul) is used as code coverage tool. You can configure it in the [`./config/karma/karma.conf.js`](/config/karma/karma.conf.js) file.
 
-It will produce reports you'll find in the `./reports/coverage` folder each time you run unit-tests.
+It will produce reports you'll find in the `./reports/coverage/[browser_name]/` folder each time you run unit-tests.
 
 ## License
 
