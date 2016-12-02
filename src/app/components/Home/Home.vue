@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+#home
   h1 Home
   //.logo_test
   img(src='assets/img/logo.svg')

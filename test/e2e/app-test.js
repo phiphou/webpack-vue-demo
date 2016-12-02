@@ -1,14 +1,21 @@
 module.exports = {
-  'Testing About page': function (browser) {
-    browser
-      .url('http://localhost:8082/#/about')
-      .waitForElementVisible('body', 1000)
-      .assert.urlEquals('http://localhost:8082/#/about')
-      .assert.cssClassPresent('.menu li.about > a', 'router-link-active')
-      .assert.containsText('#about', 'About')
+  'Testing Home page': browser => {
+    var homePage = browser.page.Home()
+    homePage.init()
+    homePage.assert.cssClassPresent('@active_link', 'router-link-active')
+    homePage.expect.element('@homeDiv').to.be.present
+    homePage.assert.containsText('@homeDiv', 'Home')
   },
 
-  'Testing peopleList route': function (browser) {
+  'Testing About page': browser => {
+    var aboutPage = browser.page.About()
+    aboutPage.init()
+    aboutPage.assert.cssClassPresent('@active_link', 'router-link-active')
+    aboutPage.expect.element('@aboutDiv').to.be.present
+    aboutPage.assert.containsText('@aboutDiv', 'About')
+  },
+
+  'Testing peopleList route': browser => {
     // const devServer = browser.globals.devServerURL
     browser
       .url('http://localhost:8082/#/peopleList')
@@ -23,21 +30,21 @@ module.exports = {
     browser.assert.urlEquals('http://localhost:8082/#/peopleList')
   },
 
-  'Testing gender selection': function (browser) {
+  'Testing gender selection': browser => {
     browser.waitForElementVisible('ul.bob', 2000, function () {
       browser
-        .click('li label[id=g_male]', function (response) {
+        .click('li label[id=g_male]', response => {
           this.expect.element('li input[id=g_male]').to.be.selected
           this.assert.cssClassPresent('ul.bob li:nth-child(1) div img', 'male',
             'male class should be present in the first element.')
         })
-        .click('li label[id=g_female]', function (response) {
+        .click('li label[id=g_female]', response => {
           this.assert.cssClassNotPresent('ul.bob li:nth-child(1) div img', 'male',
             'male class should not be present anymore in the first element.')
           this.assert.cssClassPresent('ul.bob li:nth-child(1) div img', 'female',
             'female class should be present in the first element.')
         })
-        .click('li label[id=g_all]', function (response) {
+        .click('li label[id=g_all]', response => {
           this.expect.element('li input[id=g_all').to.be.selected
         })
     })

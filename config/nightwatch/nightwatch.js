@@ -6,6 +6,7 @@ module.exports = {
   output_folder: projectRoot + '/reports/e2e/',
   custom_commands_path: '',
   custom_assrtions_path: '',
+  page_objects_path: 'test/e2e/pages',
   globals_path: 'config/nightwatch/globals.js',
   selenium: {
     start_process: true,
