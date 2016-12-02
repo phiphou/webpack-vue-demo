@@ -8,7 +8,7 @@
 
 # webpack-vue-demo
 
-A very basic but complete demo project that use [VueJs](http://babeljs.io/) as front-end framework (with [Vue-resource](https://github.com/pagekit/vue-resource) and [Vue-router](https://github.com/vuejs/vue-router)), [Babel](http://babeljs.io/) for [ES6](http://www.ecma-international.org/ecma-262/6.0/) transpilation, [Webpack2](http://webpack.github.io/) as module loader, [SASS](http://sass-lang.com/) as a CSS preprocessor, [Karma](https://karma-runner.github.io/1.0/), [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/) for unit tests, [nightwatch](http://nightwatchjs.org/) for e2e tests and finally [Istanbul](https://github.com/gotwarlost/istanbul) for code coverage.
+A very basic but complete demo project that use [VueJs](http://babeljs.io/) as front-end framework (with [Vue-resource](https://github.com/pagekit/vue-resource) and [Vue-router](https://github.com/vuejs/vue-router)), [Babel](http://babeljs.io/) for [ES6](http://www.ecma-international.org/ecma-262/6.0/) transpilation, [Webpack2](http://webpack.github.io/) as module bundler, [SASS](http://sass-lang.com/) as CSS preprocessor, [Karma](https://karma-runner.github.io/1.0/), [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/) for unit tests, [nightwatch](http://nightwatchjs.org/) for e2e tests and finally [Istanbul](https://github.com/gotwarlost/istanbul) for code coverage.
 
 ## Quick Start
 
@@ -39,7 +39,7 @@ First, make sure you've got [NodeJS](http://nodejs.org) installed. If not, go to
 
 If everything is ok, `node -v` should print your node version and `npm -v` should print NPM's one. Minimum requirements for this project are node >= `5.x.x` and NPM >= `3.x.x`.
 
-The, clone or fork this repo and run `npm install` to install the application.
+Then, clone or fork this repo and run `npm install` to install the application.
 
 ```bash
 $ git clone https://github.com/phiphou/webpack-vue-demo.git
@@ -48,7 +48,7 @@ $ npm install
 ```
 Dependencies will be installed in the `./node_modules` folder.
 
-If you prefer, you can also use the new **[Yarn](https://yarnpkg.com/)** package manager.
+You can also use the new **[Yarn](https://yarnpkg.com/)** package manager.
 
 ```bash
 $ yarn

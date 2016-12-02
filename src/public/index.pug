@@ -8,10 +8,7 @@ html
     link(rel='apple-touch-icon', sizes='180x180', href='./assets/favicons/apple-touch-icon.png')
     link(rel='icon', type='image/png', href='./assets/favicons/favicon-32x32.png', sizes='32x32')
     link(rel='icon', type='image/png', href='./assets/favicons/favicon-16x16.png', sizes='16x16')
-    link(rel='manifest', href='./assets/favicons/manifest.json')
     link(rel='shortcut icon', href='./assets/favicons/favicon.ico')
-    meta(name='msapplication-config', content='./assets/favicons/browserconfig.xml')
-    meta(name='theme-color', content='#ffffff')
     each val, index in htmlWebpackPlugin.files.css
       link(href=''+val, rel='stylesheet', type='text/css')
 body
@@ -23,7 +20,12 @@ body
       = o.title
   #app
   .footer
-    h5 Powered by Vuejs and WebPack | © 2016
+    h5 Powered by &nbsp;
+      a.vuejs_link(href='https://vuejs.org/') Vuejs
+      | &nbsp;and&nbsp;
+      a.webpack_link(href='http://webpack.github.io/') WebPack
+      | .&nbsp; &nbsp;| &nbsp; &nbsp;© &nbsp;
+      = new Date().getFullYear().toString()
 
   each val, index in htmlWebpackPlugin.files.chunks
     script(src=''+htmlWebpackPlugin.files.chunks[index].entry)
