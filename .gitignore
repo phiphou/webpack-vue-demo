@@ -1,11 +1,11 @@
 # node_modules
 node_modules
 
-#File system
+# File system
 .DS_Store
 Thumbs.db
 
-#App
+# App
 dist
 reports
 
@@ -14,4 +14,3 @@ logs
 *.log
 npm-debug.log
 yarn-error.log
-test/e2e/reports/*
