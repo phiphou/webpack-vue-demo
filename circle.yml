@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 6.9
+    version: 7.2
   environment:
     CIRCLE_ENV: true
 dependencies:
