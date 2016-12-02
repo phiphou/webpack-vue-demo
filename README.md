@@ -93,7 +93,7 @@ Unit-tests are located in the `./test/unit/` folder and reports are available in
 
 #### E2E-tests
 
-[NightwatchJs](https://www.nightwatchjs.org) is used as E2E-tests test-runner, you can configure it in the [`./config/nightwatch.js`](/config/nightwatch.js) file.
+[NightwatchJs](http://www.nightwatchjs.org) is used as E2E-tests test-runner, you can configure it in the [`./config/nightwatch.js`](/config/nightwatch.js) file.
 
 E2E-tests are located in the `./test/e2e/` folder.
 
