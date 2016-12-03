@@ -23,9 +23,8 @@ module.exports = {
   },
   'Testing gender selection': browser => {
     var peopleListPage = browser.page.PeopleList()
-    browser.waitForElementVisible('ul.bob', 2000, function () {
-      console.log(browser)
-      browser.saveScreenshot(browser.screenshotsPath + '/fileName.png')
+    browser.waitForElementVisible('ul.bob', 2000, () => {
+      browser.saveScreenshot(browser.screenshotsPath + '/screenshot.png')
       peopleListPage.checkMaleGenderSelection()
       peopleListPage.checkFemaleGenderSelection()
       peopleListPage.checkAllGenderSelection()
