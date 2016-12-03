@@ -1,10 +1,26 @@
-[![CircleCI](https://img.shields.io/circleci/project/phiphou/webpack-vue-demo.svg?maxAge=0)](https://circleci.com/gh/phiphou/webpack-vue-demo)
-[![GitHub version](https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo.svg)](https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo)
-[![Dependency Status](https://david-dm.org/phiphou/webpack-vue-demo.svg)](https://david-dm.org/phiphou/webpack-vue-demo)
-[![devDependency Status](https://david-dm.org/phiphou/webpack-vue-demo/dev-status.svg)](https://david-dm.org/phiphou/webpack-vue-demo?type=dev)
-[![codecov](https://codecov.io/gh/phiphou/webpack-vue-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/phiphou/webpack-vue-demo)
-[![MIT license](https://img.shields.io/badge/Licence-MIT-blue.svg)](http://opensource.org/licenses/MIT)
-[![Size](https://reposs.herokuapp.com/?path=phiphou/webpack-vue-demo)](#)
+<p align="center">
+    <a href="https://circleci.com/gh/phiphou/webpack-vue-demo">
+      <img src="https://img.shields.io/circleci/project/phiphou/webpack-vue-demo.svg?maxAge=0" alt="CircleCI">
+    </a>
+    <a href="https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo">
+      <img src="https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo.svg" alt="GitHub version">
+    </a>
+    <a href="https://david-dm.org/phiphou/webpack-vue-demo">
+      <img src="https://david-dm.org/phiphou/webpack-vue-demo.svg" alt="Dependency Status">
+    </a>
+    <a href="https://david-dm.org/phiphou/webpack-vue-demo?type=dev">
+      <img src="https://david-dm.org/phiphou/webpack-vue-demo/dev-status.svg" alt="devDependency Status">
+    </a>
+    <a href="https://codecov.io/gh/phiphou/webpack-vue-demo">
+      <img src="https://codecov.io/gh/phiphou/webpack-vue-demo/branch/master/graph/badge.svg" alt="codecov">
+    </a>
+    <a href="http://opensource.org/licenses/MIT">
+      <img src="https://img.shields.io/badge/Licence-MIT-blue.svg" alt="MIT license">
+    </a>
+    <a href="#">
+      <img src="https://reposs.herokuapp.com/?path=phiphou/webpack-vue-demo" alt="Size">
+    </a>
+</p>
 
 # webpack-vue-demo
 
