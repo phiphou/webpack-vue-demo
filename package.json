@@ -17,7 +17,8 @@
     "start": "cross-env NODE_ENV=development node ./config/dev-server",
     "prod": "rimraf dist && cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.prod.js --profile --colors --display-error-details --bail",
     "test": "rimraf reports/unit reports/coverage && cross-env NODE_ENV=test karma start ./config/karma/karma.conf.js --single-run --slow 0 -d --log-timer-events",
-    "e2e": "rimraf reports/e2e && cross-env PORT=8082 node config/nightwatch/runner.js"
+    "e2e": "rimraf reports/e2e && cross-env PORT=8082 node config/nightwatch/runner.js",
+    "update_deps": "ncu -u -a && yarn"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",
@@ -69,6 +70,7 @@
     "nightwatch": "^0.9.9",
     "nightwatch-html-reporter": "^1.0.8",
     "node-sass": "^3.13.0",
+    "npm-check-updates": "^2.8.7",
     "postcss-loader": "^1.1.1",
     "pug": "^2.0.0-beta6",
     "pug-loader": "^2.3.0",
