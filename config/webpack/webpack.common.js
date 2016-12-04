@@ -66,6 +66,12 @@ module.exports = {
         })
       },
       {
+        test: /\.json$/,
+        loaders: [
+          'json-loader'
+        ]
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {

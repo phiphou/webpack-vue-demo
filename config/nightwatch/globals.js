@@ -4,7 +4,7 @@ const reporter = new HtmlReporter({
   /* If true the generated html will be opened in your browser after the test run. */
   openBrowser: !process.env.CIRCLE_ENV,
   /* The directory you've set nightwatch to store your reports. */
-  reportsDirectory: process.cwd() + '/reports/e2e/',
+  reportsDirectory: process.cwd() + '/reports/e2e/' + process.env.__NIGHTWATCH_ENV,
   /* The filename that the html report will be saved as. */
   reportFilename: `e2e_${date}.html`,
   /* The theme that will be used to generate the html report. */

@@ -3,8 +3,6 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const about = () => require.ensure([], () => require('../components/About/About'), 'About')
-
 export default new Router({
   mode: 'hash',
   routes: [{
@@ -15,7 +13,8 @@ export default new Router({
     component: require('../components/PeopleList/PeopleList')
   }, {
     path: '/about',
-    component: about
+    component: () => require.ensure([], () => require('../components/About/About'), 'About'),
+    name: 'about'
   }, {
     path: '/',
     redirect: '/home'

@@ -5,20 +5,17 @@ chai.use(chaiAsPromised)
 import Vue from 'vue'
 import Hello from '../../src/app/components/PeopleList/PeopleList'
 Vue.use(require('vue-resource'))
+import router from '../../src/app/router'
+const mocks = require('../mocks/db.json')
 
-let response = {
-  results: [
-    {
-      name: {
-        first: 'npn',
-        last: 'lkj'
-      },
-      gender: 'female',
-      picture: {
-        thumbnail: ''
-      }
-    }]
-}
+describe('Router', () => {
+  it('should find the lazy loaded about comp', (done) => {
+    router.replace('/about')
+    expect(router.resolve('/about').resolved.matched.length).not.equal(0)
+    done()
+  })
+})
+
 describe('PeopleList.vue', () => {
   it('should be pending false before mount', () => {
     const defaultData = Hello.data().pending
@@ -42,7 +39,7 @@ describe('Call API', () => {
 
   beforeEach(() => {
     Vue.http.interceptors.push((request, next) => {
-      next(request.respondWith(JSON.stringify(response), {
+      next(request.respondWith(JSON.stringify(mocks.people), {
         status: 200
       }))
     })
@@ -68,9 +65,9 @@ describe('Call API', () => {
   it('should filter correctly', () => {
     return vm.getPeople(1).then((result) => {
       vm.gender = 'female'
-      expect(vm.filteredPeople.length).to.be.equal(1)
+      expect(vm.filteredPeople.length).to.be.equal(3)
       vm.gender = 'male'
-      expect(vm.filteredPeople.length).to.be.equal(0)
+      expect(vm.filteredPeople.length).to.be.equal(4)
     })
   })
 })

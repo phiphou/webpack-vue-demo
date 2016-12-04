@@ -44,14 +44,22 @@ module.exports = {
         javascriptEnabled: true,
         acceptSslCerts: true,
         marionette: true
-      }
+      },
+      screenshots: {
+        path: projectRoot + '/reports/e2e/firefox/screenshots'
+      },
+      output_folder: projectRoot + '/reports/e2e/firefox'
     },
     chrome: {
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
         acceptSslCerts: true
-      }
+      },
+      screenshots: {
+        path: projectRoot + '/reports/e2e/chrome/screenshots'
+      },
+      output_folder: projectRoot + '/reports/e2e/chrome'
     }
   }
 }

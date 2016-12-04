@@ -26,7 +26,7 @@ export default {
             this.persons = data.results
             this.ready = true
             this.pending = false
-            resolve(num)
+            resolve(data.results.length)
           })/* .catch(function (error) {
             console.log(error)
           }) */

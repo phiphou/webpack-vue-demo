@@ -10,7 +10,7 @@ test:
   post:
     - npm run prod
     - bash <(curl -s https://codecov.io/bash)
-    - npm run e2e
+    - npm run e2e -- --env chrome,firefox
     - cp ./reports/unit/test-results.xml ${CIRCLE_TEST_REPORTS}
-    - cp ./reports/e2e/*.xml ${CIRCLE_TEST_REPORTS}
+    - cp ./reports/e2e/**/*.xml ${CIRCLE_TEST_REPORTS}
     - mv ./reports ${CIRCLE_ARTIFACTS}
