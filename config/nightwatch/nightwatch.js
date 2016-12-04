@@ -10,13 +10,18 @@ module.exports = {
   globals_path: 'config/nightwatch/globals.js',
   selenium: {
     start_process: true,
+    request_timeout_options: {
+      timeout: 10000,
+      retry_attempts: 5
+    },
     server_path: './node_modules/selenium-standalone/.selenium/selenium-server/2.53.1-server.jar',
     log_path: projectRoot + '/reports/e2e/',
     host: '127.0.0.1',
     port: 4444,
     cli_args: {
       'webdriver.chrome.driver': require('chromedriver').path,
-      'webdriver.gecko.driver': require('geckodriver').path
+      'webdriver.gecko.driver': require('geckodriver').path,
+      'webdriver.firefox.profile': 'nightwatch'
     }
   },
   test_settings: {
@@ -24,7 +29,7 @@ module.exports = {
       launch_url: 'http://localhost',
       selenium_port: 4444,
       selenium_host: 'localhost',
-      silent: true,
+      silent: false,
       screenshots: {
         enabled: true,
         path: projectRoot + '/reports/e2e/screenshots',
