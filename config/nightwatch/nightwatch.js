@@ -26,6 +26,10 @@ module.exports = {
   },
   test_settings: {
     default: {
+      request_timeout_options: {
+        timeout: 10000,
+        retry_attempts: 5
+      },
       launch_url: 'http://localhost',
       selenium_port: 4444,
       selenium_host: 'localhost',
