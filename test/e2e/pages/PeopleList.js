@@ -42,7 +42,7 @@ module.exports = {
     },
     checkAllGenderSelection () {
       this.click('li label[id=g_all]', response => {
-        this.expect.element('li input[id=g_all').to.be.selected
+        this.expect.element('li input[id=g_all]').to.be.selected
       })
     }
   }]
