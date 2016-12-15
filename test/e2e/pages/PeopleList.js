@@ -19,7 +19,7 @@ module.exports = {
     },
     checkDisplay () {
       // peopleListPage.expect.element('@peopleListDiv').to.have.css('display').which.equals('block')
-      this.getCssProperty('.hello', 'display', function (result) {
+      this.api.getCssProperty('.hello', 'display', function (result) {
         this.assert.equal(typeof result, 'object')
         this.assert.equal(result.status, 0)
         this.assert.equal(result.value, 'block')

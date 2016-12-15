@@ -96,6 +96,15 @@ module.exports = {
       desiredCapabilities: {
         browserName: 'android'
       }
+    },
+    'ios': {
+      selenium_host: 'ondemand.saucelabs.com',
+      selenium_port: 80,
+      username: '${SAUCE_USERNAME}',
+      access_key: '${SAUCE_ACCESS_KEY}',
+      desiredCapabilities: {
+        browserName: 'ios'
+      }
     }
   }
 }
