@@ -15,7 +15,7 @@ module.exports = {
     log_path: `${projectRoot}/reports/e2e/`,
     host: '127.0.0.1',
     port: 4444,
-    silent: true,
+    silent: false,
     cli_args: {
       'webdriver.chrome.driver': require('chromedriver').path,
       'webdriver.gecko.driver': require('geckodriver').path
@@ -27,7 +27,7 @@ module.exports = {
       launch_url: 'http://localhost',
       selenium_port: process.env.CIRCLE_ENV ? 80 : 4444,
       selenium_host: process.env.CIRCLE_ENV ? 'ondemand.saucelabs.com' : 'localhost',
-      silent: true,
+      silent: false,
       screenshots: {
         enabled: true,
         path: projectRoot + `/reports/e2e/${utils.reportsDir}/screenshots`,
