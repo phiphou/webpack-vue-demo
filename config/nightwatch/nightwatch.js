@@ -103,8 +103,7 @@ module.exports = {
       username: '${SAUCE_USERNAME}',
       access_key: '${SAUCE_ACCESS_KEY}',
       desiredCapabilities: {
-        platformName: 'iOS',
-        browserName: 'Safari'
+        browserName: 'iPhone'
       }
     }
   }
