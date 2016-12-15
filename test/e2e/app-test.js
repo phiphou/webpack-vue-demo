@@ -36,7 +36,7 @@ module.exports = {
     var peopleListPage = browser.page.PeopleList()
     peopleListPage.init()
     peopleListPage.checkTitle()
-    peopleListPage.checkDisplay()
+    // peopleListPage.checkDisplay()
     // peopleListPage.assert.urlEquals('http://localhost/dist/#/peopleList')
     // peopleListPage.expect.element('@peopleListDiv').to.have.css('display').which.equals('block')
     peopleListPage.expect.element('input[id=g_all').to.be.selected
