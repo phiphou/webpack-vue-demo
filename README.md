@@ -1,23 +1,23 @@
 <p align="center" style="margin-bottom:12px">
-    <a href="https://circleci.com/gh/phiphou/webpack-vue-demo">
+    <a href="https://circleci.com/gh/phiphou/webpack-vue-demo"  style="text-decoration:none">
       <img src="https://img.shields.io/circleci/project/phiphou/webpack-vue-demo.svg?maxAge=0" alt="CircleCI">
     </a>
-    <a href="https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo">
+    <a href="https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo"  style="text-decoration:none">
       <img src="https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo.svg" alt="GitHub version">
     </a>
-    <a href="https://david-dm.org/phiphou/webpack-vue-demo">
+    <a href="https://david-dm.org/phiphou/webpack-vue-demo"  style="text-decoration:none">
       <img src="https://david-dm.org/phiphou/webpack-vue-demo.svg" alt="Dependency Status">
     </a>
-    <a href="https://david-dm.org/phiphou/webpack-vue-demo?type=dev">
+    <a href="https://david-dm.org/phiphou/webpack-vue-demo?type=dev"  style="text-decoration:none">
       <img src="https://david-dm.org/phiphou/webpack-vue-demo/dev-status.svg" alt="devDependency Status">
     </a>
-    <a href="https://codecov.io/gh/phiphou/webpack-vue-demo">
+    <a href="https://codecov.io/gh/phiphou/webpack-vue-demo"  style="text-decoration:none">
       <img src="https://codecov.io/gh/phiphou/webpack-vue-demo/branch/master/graph/badge.svg" alt="codecov">
     </a>
-    <a href="http://opensource.org/licenses/MIT">
+    <a href="http://opensource.org/licenses/MIT"  style="text-decoration:none">
       <img src="https://img.shields.io/badge/Licence-MIT-blue.svg" alt="MIT license">
     </a>
-    <a href="#">
+    <a href="#" style="text-decoration:none">
       <img src="https://reposs.herokuapp.com/?path=phiphou/webpack-vue-demo" alt="Size">
     </a>
 </p>
