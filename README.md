@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" style="margin-bottom:12px">
     <a href="https://circleci.com/gh/phiphou/webpack-vue-demo">
       <img src="https://img.shields.io/circleci/project/phiphou/webpack-vue-demo.svg?maxAge=0" alt="CircleCI">
     </a>
@@ -21,7 +21,7 @@
       <img src="https://reposs.herokuapp.com/?path=phiphou/webpack-vue-demo" alt="Size">
     </a>
 </p>
-<p align="center">
+<p align="center" style="height:62px;margin-bottom:20px">
   <a href="https://saucelabs.com/u/phiphou"><img src="https://saucelabs.com/browser-matrix/phiphou.svg" alt="Browser Matrix"></a>
 </p>
 
@@ -135,6 +135,8 @@ Reports are available in the `./reports/e2e` folder in [JUnit](http://junit.org/
 [Istanbul](https://github.com/gotwarlost/istanbul) is used as code coverage tool. You can configure it in the [`./config/karma/karma.conf.js`](/config/karma/karma.conf.js) file.
 
 It will produce reports you'll find in the `./reports/coverage/[browser_name]/` folder each time you run unit-tests.
+
+Codecov is used for CI, you can find the current code coverage state here :
 
 ## License
 
