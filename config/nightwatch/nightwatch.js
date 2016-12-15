@@ -12,10 +12,10 @@ module.exports = {
   selenium: {
     start_process: true,
     server_path: './node_modules/selenium-standalone/.selenium/selenium-server/2.53.1-server.jar',
-    log_path: `${projectRoot}/reports/e2e/${process.env.CIRCLE_ENV ? process.env.__NIGHTWATCH_ENV : ''}/`,
+    log_path: `${projectRoot}/reports/e2e/`,
     host: '127.0.0.1',
     port: 4444,
-    silent: false,
+    silent: true,
     cli_args: {
       'webdriver.chrome.driver': require('chromedriver').path,
       'webdriver.gecko.driver': require('geckodriver').path
