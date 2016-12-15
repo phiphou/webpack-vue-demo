@@ -10,12 +10,12 @@ module.exports = {
   page_objects_path: 'test/e2e/pages',
   globals_path: 'config/nightwatch/globals.js',
   selenium: {
-    start_process: true,
+    start_process: false,
     server_path: './node_modules/selenium-standalone/.selenium/selenium-server/2.53.1-server.jar',
     log_path: `${projectRoot}/reports/e2e/`,
     host: '127.0.0.1',
     port: 4444,
-    silent: true,
+    silent: false,
     cli_args: {
       'webdriver.chrome.driver': require('chromedriver').path,
       'webdriver.gecko.driver': require('geckodriver').path
@@ -27,7 +27,7 @@ module.exports = {
       launch_url: 'http://localhost',
       selenium_port: process.env.CIRCLE_ENV ? 80 : 4444,
       selenium_host: process.env.CIRCLE_ENV ? 'ondemand.saucelabs.com' : 'localhost',
-      silent: true,
+      silent: false,
       screenshots: {
         enabled: true,
         path: projectRoot + `/reports/e2e/${utils.reportsDir}/screenshots`,
@@ -86,6 +86,15 @@ module.exports = {
         browserName: 'MicrosoftEdge',
         platform: 'Windows 10',
         version: '14.14393'
+      }
+    },
+    'android': {
+      selenium_host: 'ondemand.saucelabs.com',
+      selenium_port: 80,
+      username: '${SAUCE_USERNAME}',
+      access_key: '${SAUCE_ACCESS_KEY}',
+      desiredCapabilities: {
+        browserName: 'android'
       }
     }
   }
