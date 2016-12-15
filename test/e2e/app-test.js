@@ -39,7 +39,7 @@ module.exports = {
     // peopleListPage.checkDisplay()
     // peopleListPage.assert.urlEquals('http://localhost/dist/#/peopleList')
     // peopleListPage.expect.element('@peopleListDiv').to.have.css('display').which.equals('block')
-    peopleListPage.expect.element('input[id=g_all').to.be.selected
+    peopleListPage.expect.element('input[id=g_all]').to.be.selected
   },
   'Testing gender selection': browser => {
     var peopleListPage = browser.page.PeopleList()
