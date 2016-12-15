@@ -65,7 +65,7 @@ describe('Call API', () => {
     })
   })
 
-  it('should filter correctly', () => {
+  it('should filter people correctly', () => {
     return vm.getPeople(1).then((result) => {
       vm.gender = 'female'
       expect(vm.filteredPeople.length).to.be.equal(3)
