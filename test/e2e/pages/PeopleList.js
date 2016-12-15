@@ -1,5 +1,5 @@
 module.exports = {
-  url: '/#/peopleList',
+  url: '#/peopleList',
   elements: {
     active_link: '.menu li.peopleList > a',
     peopleListDiv: '.hello'

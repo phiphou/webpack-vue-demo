@@ -9,5 +9,21 @@ module.exports = webpackMerge(commonConfig, {
       debug: true,
       comments: true
     })
-  ]
+  ],
+  stats: {
+    colors: true,
+    hash: true,
+    version: true,
+    timings: true,
+    assets: false,
+    chunks: true,
+    chunkModules: false,
+    modules: false,
+    children: false,
+    cached: false,
+    reasons: true,
+    source: false,
+    errorDetails: true,
+    chunkOrigins: false
+  }
 })

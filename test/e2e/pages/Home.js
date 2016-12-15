@@ -1,6 +1,6 @@
 module.exports = {
   url: function () {
-    return this.api.globals.devServerURL + '/about'
+    return this.api.globals.devServerURL + '/'
   },
   elements: {
     active_link: '.menu li.home > a',

@@ -7,7 +7,7 @@
         "last": "boyd"
       },
       "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/26.jpg"
+        "thumbnail": "http://randomuser.me/api/portraits/thumb/men/26.jpg"
       }
     }, {
       "gender": "male",
@@ -16,7 +16,7 @@
         "last": "dubois"
       },
       "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/33.jpg"
+        "thumbnail": "http://randomuser.me/api/portraits/thumb/men/33.jpg"
       }
     }, {
       "gender": "female",
@@ -25,7 +25,7 @@
         "last": "park"
       },
       "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/34.jpg"
+        "thumbnail": "http://randomuser.me/api/portraits/thumb/women/34.jpg"
       }
     }, {
       "gender": "male",
@@ -34,7 +34,7 @@
         "last": "erkkila"
       },
       "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/95.jpg"
+        "thumbnail": "http://randomuser.me/api/portraits/thumb/men/95.jpg"
       }
     }, {
       "gender": "female",
@@ -43,7 +43,7 @@
         "last": "brown"
       },
       "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/91.jpg"
+        "thumbnail": "http://randomuser.me/api/portraits/thumb/women/91.jpg"
       }
     }, {
       "gender": "female",
@@ -52,7 +52,7 @@
         "last": "brooks"
       },
       "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/85.jpg"
+        "thumbnail": "http://randomuser.me/api/portraits/thumb/women/85.jpg"
       }
     }, {
       "gender": "male",
@@ -61,7 +61,7 @@
         "last": "moilanen"
       },
       "picture": {
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/22.jpg"
+        "thumbnail": "http://randomuser.me/api/portraits/thumb/men/22.jpg"
       }
     }]
   }

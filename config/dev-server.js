@@ -4,9 +4,9 @@ const webpackConfig = require('./webpack/webpack.dev')
 const path = require('path')
 const express = require('express')
 const opn = require('opn')
-const port = process.env.PORT || 8082
+const port = process.env.PORT || 7000
 const compiler = webpack(webpackConfig)
-webpackConfig.entry.app.unshift('webpack-dev-server/client?http://localhost:8082/')
+webpackConfig.entry.app.unshift('webpack-dev-server/client?http://localhost:' + port)
 const server = new WebpackDevServer(compiler, {
   contentBase: path.resolve('/'),
   historyApiFallback: true,
@@ -16,9 +16,9 @@ const server = new WebpackDevServer(compiler, {
     app.use('/api', jsonServer.router(path.join(__dirname, '../test/mocks/db.json')))
   },
   clientLogLevel: 'info',
-  quiet: false,
+  quiet: true,
   inline: true,
-  noInfo: process.env.NODE_ENV === 'testing',
+  noInfo: !process.env.NODE_ENV === 'testing',
   watchOptions: {
     aggregateTimeout: 300,
     poll: 1000

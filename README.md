@@ -21,6 +21,9 @@
       <img src="https://reposs.herokuapp.com/?path=phiphou/webpack-vue-demo" alt="Size">
     </a>
 </p>
+<p align="center">
+  <a href="https://saucelabs.com/u/phiphou"><img src="https://saucelabs.com/browser-matrix/phiphou.svg" alt="Browser Matrix"></a>
+</p>
 
 # webpack-vue-demo
 

@@ -155,6 +155,19 @@ module.exports = {
   ],
   // Nice colored output
   stats: {
-    colors: true
+    colors: true,
+    hash: true,
+    version: true,
+    timings: true,
+    assets: false,
+    chunks: false,
+    chunkModules: false,
+    modules: false,
+    children: false,
+    cached: false,
+    reasons: true,
+    source: false,
+    errorDetails: true,
+    chunkOrigins: false
   }
 }

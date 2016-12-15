@@ -10,6 +10,7 @@ if (opts.indexOf('--env') === -1) {
 }
 
 var spawn = require('cross-spawn')
+
 var runner = spawn('./node_modules/.bin/nightwatch', opts, { stdio: 'inherit' })
 
 runner.on('exit', code => {

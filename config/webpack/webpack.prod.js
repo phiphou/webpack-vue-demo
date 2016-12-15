@@ -58,7 +58,8 @@ module.exports = webpackMerge(commonConfig, {
         )
       }
     })
-  ]
+  ],
+  stats: 'none'
 })
 
 // Generate banner text for Webpack banner"s plugin.

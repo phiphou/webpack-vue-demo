@@ -20,7 +20,7 @@ module.exports = webpackMerge(commonConfig, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'),
-      'process.env.API_endPoint': JSON.stringify('http://localhost:8082/api/people/')
+      'process.env.API_endPoint': JSON.stringify('http://localhost:7000/api/people/')
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
