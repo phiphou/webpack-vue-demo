@@ -1,27 +1,27 @@
-<p align="center" style="margin-bottom:12px">
-    <a href="https://circleci.com/gh/phiphou/webpack-vue-demo"  style="text-decoration:none">
+<p align="center">
+    <a href="https://circleci.com/gh/phiphou/webpack-vue-demo">
       <img src="https://img.shields.io/circleci/project/phiphou/webpack-vue-demo.svg?maxAge=0" alt="CircleCI">
     </a>
-    <a href="https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo"  style="text-decoration:none">
+    <a href="https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo">
       <img src="https://badge.fury.io/gh/phiphou%2Fwebpack-vue-demo.svg" alt="GitHub version">
     </a>
-    <a href="https://david-dm.org/phiphou/webpack-vue-demo"  style="text-decoration:none">
+    <a href="https://david-dm.org/phiphou/webpack-vue-demo">
       <img src="https://david-dm.org/phiphou/webpack-vue-demo.svg" alt="Dependency Status">
     </a>
-    <a href="https://david-dm.org/phiphou/webpack-vue-demo?type=dev"  style="text-decoration:none">
+    <a href="https://david-dm.org/phiphou/webpack-vue-demo?type=dev">
       <img src="https://david-dm.org/phiphou/webpack-vue-demo/dev-status.svg" alt="devDependency Status">
     </a>
-    <a href="https://codecov.io/gh/phiphou/webpack-vue-demo"  style="text-decoration:none">
+    <a href="https://codecov.io/gh/phiphou/webpack-vue-demo">
       <img src="https://codecov.io/gh/phiphou/webpack-vue-demo/branch/master/graph/badge.svg" alt="codecov">
     </a>
-    <a href="http://opensource.org/licenses/MIT"  style="text-decoration:none">
+    <a href="http://opensource.org/licenses/MIT">
       <img src="https://img.shields.io/badge/Licence-MIT-blue.svg" alt="MIT license">
     </a>
     <a href="#" style="text-decoration:none">
       <img src="https://reposs.herokuapp.com/?path=phiphou/webpack-vue-demo" alt="Size">
     </a>
 </p>
-<p align="center" style="height:62px;margin-bottom:20px">
+<p align="center">
   <a href="https://saucelabs.com/u/phiphou"><img src="https://saucelabs.com/browser-matrix/phiphou.svg" alt="Browser Matrix"></a>
 </p>
 
@@ -136,7 +136,11 @@ Reports are available in the `./reports/e2e` folder in [JUnit](http://junit.org/
 
 It will produce reports you'll find in the `./reports/coverage/[browser_name]/` folder each time you run unit-tests.
 
-Codecov is used for CI, you can find the current code coverage state here :
+### Continuous integration
+
+[CircleCI](https://circleci.com/) is used for continuous integration, [Codecov](https://codecov.io) for coverage and [SauceLabs](https://saucelabs.com/) for cross-browsers testing.
+
+See [`./circleci.yml`](/circle.yml) and badges at the top of this document.
 
 ## License
 
