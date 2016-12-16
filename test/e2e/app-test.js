@@ -37,6 +37,7 @@ module.exports = {
     peopleListPage.init()
     peopleListPage.checkTitle()
     browser.cssProp('.hello', 'display', function (result) {
+      console.log(result)
       this.assert.equal(result.value, 'block')
     })
     // peopleListPage.checkDisplay()

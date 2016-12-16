@@ -27,7 +27,7 @@ module.exports = {
       launch_url: 'http://localhost',
       selenium_port: process.env.CIRCLE_ENV ? 80 : 4444,
       selenium_host: process.env.CIRCLE_ENV ? 'ondemand.saucelabs.com' : 'localhost',
-      silent: false,
+      silent: true,
       screenshots: {
         enabled: true,
         path: projectRoot + `/reports/e2e/${utils.reportsDir}/screenshots`,
