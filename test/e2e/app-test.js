@@ -36,6 +36,9 @@ module.exports = {
     var peopleListPage = browser.page.PeopleList()
     peopleListPage.init()
     peopleListPage.checkTitle()
+    browser.cssProp('.hello', 'display', function (result) {
+      this.assert.equal(result.value, 'block')
+    })
     // peopleListPage.checkDisplay()
     // peopleListPage.assert.urlEquals('http://localhost/dist/#/peopleList')
     // peopleListPage.expect.element('@peopleListDiv').to.have.css('display').which.equals('block')

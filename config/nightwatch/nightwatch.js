@@ -5,17 +5,17 @@ const utils = require('./utils.js')
 module.exports = {
   src_folders: [`${projectRoot}/test/e2e/`],
   output_folder: `${projectRoot}/reports/e2e/${utils.reportsDir}/`,
-  custom_commands_path: '',
+  custom_commands_path: `${projectRoot}/test/commands/`,
   custom_assrtions_path: '',
   page_objects_path: 'test/e2e/pages',
   globals_path: 'config/nightwatch/globals.js',
   selenium: {
-    start_process: false,
+    start_process: !process.env.CIRCLE_ENV,
     server_path: './node_modules/selenium-standalone/.selenium/selenium-server/2.53.1-server.jar',
     log_path: `${projectRoot}/reports/e2e/`,
     host: '127.0.0.1',
     port: 4444,
-    silent: false,
+    silent: true,
     cli_args: {
       'webdriver.chrome.driver': require('chromedriver').path,
       'webdriver.gecko.driver': require('geckodriver').path
