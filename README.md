@@ -49,7 +49,8 @@ Your default browser should open at [http://127.0.0.1:8080](http://127.0.0.1:808
    * [Testing](#testing)
      * [Unit tests](#unit-tests)
      * [E2E tests](#e2e-tests)
-     * [Coverage](#coverage)   
+     * [Coverage](#coverage)
+   * [Continuous integration](#continuous-integration)
  * [License](#license)
 
 ## Install
