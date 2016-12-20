@@ -4,6 +4,8 @@ machine:
   environment:
     CIRCLE_ENV: true
 dependencies:
+  pre:
+    - rm -rf node_modules
   post:
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
