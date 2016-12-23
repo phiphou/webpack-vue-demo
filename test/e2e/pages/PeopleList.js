@@ -7,7 +7,7 @@ module.exports = {
   commands: [{
     init () {
       this.navigate(this.api.globals.devServerURL + this.url)
-      this.waitForElementVisible('@peopleListDiv', 1000)
+      this.waitForElementVisible('@peopleListDiv', 10000)
       return this.api
     },
     checkTitle () {

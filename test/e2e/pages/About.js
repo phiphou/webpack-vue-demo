@@ -7,7 +7,7 @@ module.exports = {
   commands: [{
     init () {
       this.navigate(this.api.globals.devServerURL + this.url)
-      this.waitForElementVisible('#about', 1000)
+      this.waitForElementVisible('#about', 10000)
       return this.api
     }
   }]
