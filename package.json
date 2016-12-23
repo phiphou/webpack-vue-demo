@@ -20,7 +20,7 @@
     "e2e": "rimraf reports/e2e && cross-env PORT=7000 node config/nightwatch/runner.js"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.4",
+    "autoprefixer": "^6.6.0",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
     "babel-istanbul": "^0.12.1",
@@ -63,7 +63,7 @@
     "karma-mocha-reporter": "^2.2.1",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-sourcemap-loader": "~0.3.7",
-    "karma-webpack": "~1.8.0",
+    "karma-webpack": "~1.8.1",
     "mocha": "^3.2.0",
     "nightwatch": "phiphou/nightwatch",
     "nightwatch-html-reporter": "^1.0.8",
@@ -86,7 +86,7 @@
     "webpack-dev-middleware": "^1.9.0",
     "webpack-dev-server": "^2.1.0-beta.0",
     "webpack-md5-hash": "0.0.5",
-    "webpack-merge": "^1.1.2"
+    "webpack-merge": "^2.0.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.20.0",
