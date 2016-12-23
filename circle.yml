@@ -1,17 +1,13 @@
 machine:
   node:
-    version: 7.2
+    version: 7.3
   environment:
     YARN_VERSION: 0.18.1
     PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
     CIRCLE_ENV: true
 dependencies:
   pre:
-    # - echo ${CIRCLE_PROJECT_USERNAME} ${CIRCLE_PROJECT_REPONAME}
-    # - echo ${CIRCLE_BRANCH} ${CIRCLE_TAG} ${CIRCLE_SHA1}
     - echo ${CI_PULL_REQUEST}
-    # - echo ${CIRCLE_USERNAME} ${CIRCLE_BUILD_NUM}
-    # - echo ${CIRCLE_ARTIFACTS} ${CIRCLE_TEST_REPORTS}
     - echo ${CIRCLE_PR_USERNAME} ${CIRCLE_PR_REPONAME} ${CIRCLE_PR_NUMBER}
     # - rm -rf node_modules
     - |
@@ -24,33 +20,37 @@ dependencies:
     - ~/.yarn
     - ~/.cache/yarn
   post:
+    # get Sauce Connect from saucelabs
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
 test:
+  # run unit tests and send coverage reports to Codecov
   override:
       - yarn test
-      - cd sc-*-linux && ./bin/sc --user ${SAUCE_USERNAME} --api-key ${SAUCE_ACCESS_KEY} --readyfile ~/sauce_is_ready:
-          background: true
-      # Wait for tunnel to be ready
-      - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done:
-          timeout: 1900
+      - bash <(curl -s https://codecov.io/bash)
   post:
-    #
     - npm run prod
-    - bash <(curl -s https://codecov.io/bash)
+    # Run sauce connect and wait for tunnel to be ready
+    - cd sc-*-linux && ./bin/sc --user ${SAUCE_USERNAME} --api-key ${SAUCE_ACCESS_KEY} --readyfile ~/sauce_is_ready:
+        background: true
+    - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done:
+        timeout: 1900
+    # Run E2E tests
     - npm run e2e -- --env chrome_win7,firefox_mac,ie11,edge14,android,ios:
         timeout: 1900
+    # Kill sauce connect
+    - killall --wait sc
+    # Copy and move reports
     - cp ./reports/unit/test-results.xml ${CIRCLE_TEST_REPORTS}
     - cp ./reports/e2e/**/*.xml ${CIRCLE_TEST_REPORTS}
     - mv ./reports ${CIRCLE_ARTIFACTS}
-    - killall --wait sc
     - |
       if [[ ${CI_PULL_REQUEST} ]]; then
         - yarn
-        - git config --global user.email ${GIT_USER_EMAIL}
-        - git config --global user.name ${GIT_USER_NAME}
-        - git config --global push.default simple
+        - git config -g user.email ${GIT_USER_EMAIL}
+        - git config -g user.name ${GIT_USER_NAME}
+        - git config -g push.default simple
         - git add yarn.lock
-        - git commit --message "chore&colon; update yarn.lock"
+        - git commit -m "chore&colon; update yarn.lock"
         - git push
       fi
