@@ -83,6 +83,29 @@ module.exports = config => {
     reportSlowerThan: 0,
     singleRun: true,
     webpack: require('../webpack/webpack.test'),
+    webpackMiddleware: {
+            // webpack-dev-middleware configuration
+            // i.e.
+      // noInfo: true,
+            // and use stats to turn off verbose output
+      stats: {
+        // options i.e.
+        colors: true,
+        hash: true,
+        version: true,
+        timings: true,
+        assets: false,
+        chunks: false,
+        chunkModules: false,
+        modules: false,
+        children: false,
+        cached: false,
+        reasons: true,
+        source: false,
+        errorDetails: true,
+        chunkOrigins: false
+      }
+    },
     webpackServer: {noInfo: true}
   })
 }

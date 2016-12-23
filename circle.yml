@@ -11,8 +11,8 @@ dependencies:
     - tar -xzf sc-latest-linux.tar.gz
 test:
   override:
-    - cd sc-*-linux && ./bin/sc --user ${SAUCE_USERNAME} --api-key ${SAUCE_ACCESS_KEY} --readyfile ~/sauce_is_ready:
-        background: true
+    - cd sc-*-linux && ./bin/sc --user ${SAUCE_USERNAME} --api-key ${SAUCE_ACCESS_KEY} --readyfile ~/sauce_is_ready --pidfile sc.pid --readyfile ~/sauce_is_ready --tunnel-identifier $CIRCLE_BUILD_NUM:
+        background: true 
     # Wait for tunnel to be ready
     - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done:
        timeout: 1900
