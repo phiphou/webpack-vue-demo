@@ -7,8 +7,8 @@ machine:
     CIRCLE_ENV: true
 dependencies:
   pre:
-    - echo ${CI_PULL_REQUEST}
-    - echo ${CIRCLE_PR_USERNAME} ${CIRCLE_PR_REPONAME} ${CIRCLE_PR_NUMBER}
+    # - echo ${CI_PULL_REQUEST}
+    # - echo ${CIRCLE_PR_USERNAME} ${CIRCLE_PR_REPONAME} ${CIRCLE_PR_NUMBER}
     # - rm -rf node_modules
     - |
       if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then
@@ -26,8 +26,8 @@ dependencies:
 test:
   # run unit tests and send coverage reports to Codecov
   override:
-      - yarn test
-      - bash <(curl -s https://codecov.io/bash)
+    - yarn test
+    - bash <(curl -s https://codecov.io/bash)
   post:
     - npm run prod
     # Run sauce connect and wait for tunnel to be ready
@@ -42,7 +42,6 @@ test:
     - killall --wait sc
     # Copy and move reports
     - cp ./reports/unit/test-results.xml ${CIRCLE_TEST_REPORTS}
-    - cp ./reports/e2e/**/*.xml ${CIRCLE_TEST_REPORTS}
     - mv ./reports ${CIRCLE_ARTIFACTS}
     - |
       if [[ ${CI_PULL_REQUEST} ]]; then
