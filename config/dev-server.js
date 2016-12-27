@@ -16,9 +16,9 @@ const server = new WebpackDevServer(compiler, {
     app.use('/api', jsonServer.router(path.join(__dirname, '../test/mocks/db.json')))
   },
   clientLogLevel: 'info',
-  quiet: true,
+  // quiet: true,
   inline: true,
-  noInfo: !process.env.NODE_ENV === 'testing',
+  // noInfo: !process.env.NODE_ENV === 'testing',
   watchOptions: {
     aggregateTimeout: 300,
     poll: 1000

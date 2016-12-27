@@ -1,7 +1,9 @@
 <template lang="pug" src="./PeopleList.tpl.pug"></template>
 <script>
 import Vue from 'vue'
-
+import Vuex from 'vuex'
+import store from '../../store'
+Vue.use(Vuex)
 Vue.filter('capitalize', value => value.charAt(0).toUpperCase() + value.substr(1))
 
 export default {
@@ -11,7 +13,7 @@ export default {
       environment: process.env.NODE_ENV,
       API_endPoint: process.env.API_endPoint,
       gender: 'all',
-      persons: [],
+      persons: store.state.persons,
       ready: false,
       pending: false
     }
@@ -19,18 +21,26 @@ export default {
   methods: {
     getPeople (num) {
       return new Promise((resolve, reject) => {
-        this.$user.query({
-          results: num
-        }).then(response => {
-          response.json().then(data => {
-            this.persons = data.results
-            this.ready = true
-            this.pending = false
-            resolve(data.results.length)
-          })/* .catch(function (error) {
-            console.log(error)
-          }) */
-        })
+        if (store.state.persons.length === 0) {
+          this.$user.query({
+            results: num
+          }).then(response => {
+            response.json().then(data => {
+              store.state.persons = data.results
+              this.persons = data.results
+              this.ready = true
+              this.pending = false
+              resolve(data.results.length)
+            })/* .catch(function (error) {
+              console.log(error)
+            }) */
+          })
+        } else {
+          this.ready = true
+          this.pending = false
+          this.persons = store.state.persons
+          resolve(this.persons.length)
+        }
       })
     },
     reload () {
