@@ -7,10 +7,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const pkg = require('../../package.json')
 
 module.exports = {
+  performance: { hints: false },
   entry: {
     'app': [
       './src/app/main.js'
-    ]
+    ],
+    'polyfills': './src/app/polyfills.js'
   },
   devtool: 'source-map',
   output: {

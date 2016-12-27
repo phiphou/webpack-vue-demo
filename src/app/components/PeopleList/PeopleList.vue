@@ -31,9 +31,9 @@ export default {
               this.ready = true
               this.pending = false
               resolve(data.results.length)
-            })/* .catch(function (error) {
-              console.log(error)
-            }) */
+            }).catch(function (error) {
+              reject(error)
+            })
           })
         } else {
           this.ready = true
