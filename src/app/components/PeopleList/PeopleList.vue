@@ -14,7 +14,6 @@ export default {
       API_endPoint: process.env.API_endPoint,
       gender: 'all',
       persons: store.state.persons,
-      ready: false,
       pending: false
     }
   },
@@ -26,9 +25,7 @@ export default {
             results: num
           }).then(response => {
             response.json().then(data => {
-              store.state.persons = data.results
-              this.persons = data.results
-              this.ready = true
+              store.state.persons = this.persons = data.results
               this.pending = false
               resolve(data.results.length)
             }).catch(function (error) {
@@ -36,7 +33,6 @@ export default {
             })
           })
         } else {
-          this.ready = true
           this.pending = false
           this.persons = store.state.persons
           resolve(this.persons.length)
@@ -44,7 +40,6 @@ export default {
       })
     },
     reload () {
-      this.ready = false
       this.pending = true
       this.getPeople(10)
     }

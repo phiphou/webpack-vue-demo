@@ -16,6 +16,6 @@
   ul.bob(v-show='!pending')
     li(v-for='person in filteredPeople')
       .item
-        img.item_avatar(:src='person.picture.thumbnail', v-bind:class="[person.gender === 'male' ? 'male' : 'female']")
+        img.item_avatar(:src='person.picture.thumbnail', v-bind:class="[person.gender]")
         .item_label
           | {{person.name.first | capitalize}} {{person.name.last.toUpperCase()}}
