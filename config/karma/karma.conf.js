@@ -23,7 +23,8 @@ module.exports = config => {
             {type: 'json', subdir: '.'}
         ]
         : [ {type: 'html'},
-            {type: 'text-summary'}
+            {type: 'text-summary'},
+            {type: 'lcovonly'}
         ],
       subdir: function (browser) {
         return browser.toLowerCase().split(/[ /-]/)[0]
