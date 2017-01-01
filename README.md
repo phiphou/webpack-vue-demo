@@ -135,7 +135,10 @@ Reports are available in the `./reports/e2e` folder in [JUnit](http://junit.org/
 
 [Istanbul](https://github.com/gotwarlost/istanbul) is used as code coverage tool. You can configure it in the [`./config/karma/karma.conf.js`](/config/karma/karma.conf.js) file.
 
-It will produce reports you'll find in the `./reports/coverage/[browser_name]/` folder each time you run unit-tests.
+It will produce reports you'll find in the `./reports/coverage/[browser_name]/` folder (index.html) each time you run unit-tests.
+
+It will also generate [LCOV format](http://ltp.sourceforge.net/coverage/lcov.php) report in the `./reports/coverage/[browser_name]` folder.
+
 
 ### Continuous integration
 
