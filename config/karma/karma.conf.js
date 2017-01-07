@@ -38,7 +38,7 @@ module.exports = config => {
     },
     failOnEmptyTestSuite: true,
     frameworks: ['mocha', 'chai'],
-    files: ['./karma.entry.js'],
+    files: ['./karma.entry.js', '../../src/polyfills.js'],
     htmlReporter: {
       outputFile: '../../reports/unit/unit_tests_report.html',
       pageTitle: pkg.name + ' - Unit Tests',

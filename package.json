@@ -15,7 +15,7 @@
   "scripts": {
     "postinstall": "node ./node_modules/selenium-standalone/bin/selenium-standalone install",
     "start": "cross-env NODE_ENV=development node ./config/dev-server",
-    "prod": "rimraf dist && cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.prod.js --profile --colors --display-error-details --bail",
+    "prod": "rimraf dist && cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.prod.js --hide-modules --profile --colors --display-error-details --bail",
     "test": "rimraf reports/unit reports/coverage && cross-env NODE_ENV=test karma start ./config/karma/karma.conf.js -d --log-timer-events",
     "e2e": "rimraf reports/e2e && cross-env PORT=7000 node config/nightwatch/runner.js"
   },
