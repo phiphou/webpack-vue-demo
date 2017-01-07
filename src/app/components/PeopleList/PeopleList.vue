@@ -28,9 +28,10 @@ export default {
               store.state.persons = this.persons = data.results
               this.pending = false
               resolve(data.results.length)
-            }).catch(function (error) {
-              reject(error)
             })
+            // .catch(function (error) {
+            //   reject(error)
+            // })
           })
         } else {
           this.pending = false

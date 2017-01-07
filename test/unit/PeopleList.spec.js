@@ -1,7 +1,7 @@
-const chai = require('chai')
-const expect = chai.expect
-const chaiAsPromised = require('chai-as-promised')
-chai.use(chaiAsPromised)
+// const chai = require('chai')
+// const expect = chai.expect
+// const chaiAsPromised = require('chai-as-promised')
+// chai.use(chaiAsPromised)
 import Vue from 'vue'
 import Hello from '../../src/app/components/PeopleList/PeopleList'
 Vue.use(require('vue-resource'))

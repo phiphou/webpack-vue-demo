@@ -10,7 +10,7 @@ module.exports = config => {
       format: '%b %T: %m',
       terminal: false
     },
-    browsers: !process.env.CIRCLE_ENV ? ['PhantomJS'] : ['Chrome'],
+    browsers: process.env.CIRCLE_ENV ? ['PhantomJS'] : ['Chrome'],
     captureTimeout: 60000,
     colors: true,
     concurrency: Infinity,
@@ -38,7 +38,7 @@ module.exports = config => {
     },
     failOnEmptyTestSuite: true,
     frameworks: ['mocha', 'chai'],
-    files: ['./karma.entry.js', '../../src/polyfills.js'],
+    files: ['./karma.entry.js'],
     htmlReporter: {
       outputFile: '../../reports/unit/unit_tests_report.html',
       pageTitle: pkg.name + ' - Unit Tests',

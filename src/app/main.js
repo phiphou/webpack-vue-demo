@@ -8,7 +8,6 @@ require('../style/style.sass')
 
 Vue.use(Vueresource)
 Vue.config.devtools = process.env.NODE_ENV === 'development'
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -1,7 +1,7 @@
 // Polyfill fn.bind() for PhantomJS
 /* eslint-disable no-extend-native */
 Function.prototype.bind = require('function-bind')
-
+Function.prototype.promise = require('core-js/es6/promise')
 var exclude = ['./main.js']
 var context = require.context('../../src/app', true, /\.js$/)
 context.keys().forEach(key => {
