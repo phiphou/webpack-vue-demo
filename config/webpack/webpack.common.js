@@ -11,8 +11,8 @@ module.exports = {
   entry: {
     'app': [
       './src/app/main.js'
-    ]
-    // , 'polyfills': './src/app/polyfills.js'
+    ],
+    'polyfills': './src/app/polyfills.js'
   },
   devtool: 'source-map',
   output: {
@@ -161,8 +161,8 @@ module.exports = {
     hash: true,
     version: true,
     timings: true,
-    assets: true,
-    chunks: true,
+    assets: false,
+    chunks: false,
     chunkModules: false,
     modules: false,
     children: false,
