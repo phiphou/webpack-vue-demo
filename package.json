@@ -67,7 +67,7 @@
     "mocha": "^3.2.0",
     "nightwatch": "phiphou/nightwatch",
     "nightwatch-html-reporter": "^1.0.8",
-    "node-sass": "^4.1.1",
+    "node-sass": "^4.2.0",
     "postcss-loader": "^1.2.1",
     "pug": "^2.0.0-beta6",
     "pug-loader": "^2.3.0",
