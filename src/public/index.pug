@@ -12,14 +12,17 @@ html
     each val, index in htmlWebpackPlugin.files.css
       link(href=''+val, rel='stylesheet', type='text/css')
 body
-  .header
-    h1#logo
-      a(href='')
-        span= o.locals.test
-    h1.title
-      = o.title
-  #app
-  .footer
+  #header.header
+    .subh
+      h1#logo
+        a(href='')
+          span= o.locals.test
+      h1.title
+        = o.title
+  #content
+    div
+      #app
+  #footer.footer
     h5 Powered by &nbsp;
       a.vuejs_link(href='https://vuejs.org/') Vuejs
       | &nbsp;and&nbsp;
