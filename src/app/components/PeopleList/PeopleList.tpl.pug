@@ -2,17 +2,20 @@
   .container
     ul
       li
-        input#g_all(type='radio', v-model='gender', value='all')
-        label#g_all(for='g_all') All
-        .check
+        .bmd
+          input#g_all(type='radio', v-model='gender', value='all')
+          label#g_all(for='g_all') All
+          .check
       li
-        input#g_male(type='radio', v-model='gender', value='male')
-        label#g_male(for='g_male') Male
-        .check
+        .bmd
+          input#g_male(type='radio', v-model='gender', value='male')
+          label#g_male(for='g_male') Male
+          .check
       li
-        input#g_female(type='radio', v-model='gender', value='female')
-        label#g_female(for='g_female') Female
-        .check
+        .bmd
+          input#g_female(type='radio', v-model='gender', value='female')
+          label#g_female(for='g_female') Female
+          .check
   ul.bob(v-show='!pending')
     li(v-for='person in filteredPeople')
       .item

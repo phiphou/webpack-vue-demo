@@ -58,8 +58,23 @@ module.exports = webpackMerge(commonConfig, {
         )
       }
     })
-  ] // ,
-  // stats: 'none'
+  ],
+  stats: {
+    colors: true,
+    hash: true,
+    version: true,
+    timings: true,
+    assets: true,
+    chunks: false,
+    chunkModules: false,
+    modules: true,
+    children: false,
+    cached: false,
+    reasons: true,
+    source: false,
+    errorDetails: true,
+    chunkOrigins: false
+  }
 })
 
 // Generate banner text for Webpack banner"s plugin.

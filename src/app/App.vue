@@ -16,11 +16,14 @@ export default {
   nav.menu
     ul
       li.home
-        router-link(to='/home') Home
+        .mdiv
+          router-link(to='/home') Home
       li.peopleList
-        router-link(to='/peopleList') People list
+        .mdiv
+          router-link(to='/peopleList') People list
       li.about
-        router-link(to='/about') About
+        .mdiv
+          router-link(to='/about') About
   transition(name='fade', mode='out-in')
     router-view.router-view
 </template>

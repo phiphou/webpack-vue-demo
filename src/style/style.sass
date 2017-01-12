@@ -27,6 +27,7 @@ body
   height: 30px
   width: 100%
   bottom: 0px
+  display: flex
   left: 0px
   color: white
   background: #485151
@@ -40,8 +41,8 @@ body
     padding: 100px 0
 
 h1.title
-  font-size: 36px
-  margin: auto 20px
+  font-size: 24px
+  margin: auto 0px
 
 .subh
   display: inline-flex
@@ -62,6 +63,7 @@ h1.title
   background-color: #181b1b
   color: #cfcfcf
   h5
+    font-size: 14px
     margin: 0
     a
       text-decoration: none
@@ -71,7 +73,7 @@ h1.title
         color: #799edf
 
 h1#logo
-  margin: 15px
+  margin-left: 10px
 
 #logo a
   display: block
@@ -83,11 +85,25 @@ h1#logo
     display: none
 
 .router-view
-  margin: 15px
-  margin-top: 50px
+  // margin: 15px
+  margin-top: 60px
+  margin-left: 10px
+  margin-right: 10px
 
 .fade-enter-active, .fade-leave-active
   transition: opacity .2s ease
 .fade-enter, .fade-leave-active
   transition: opacity .2s ease
   opacity: 0
+
+@media only screen and (min-width: 1064px)
+  h1.title
+    font-size: 24px
+  .router-view
+    margin-top: 60px
+  #footer
+    height: 30px
+    display: block
+  .footer
+    h5
+      font-size: 14px

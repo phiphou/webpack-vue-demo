@@ -164,7 +164,7 @@ module.exports = {
     assets: false,
     chunks: false,
     chunkModules: false,
-    modules: false,
+    modules: true,
     children: false,
     cached: false,
     reasons: true,
