@@ -125,7 +125,7 @@ module.exports = {
       }
     }),
     // Avoid publishing files when compilation fails
-    new webpack.NoErrorsPlugin(),
+    // new webpack.NoErrorsPlugin(),
     // Reference: https://github.com/erm0l0v/webpack-md5-hash
     new WebpackMd5Hash(),
     // Reference: https://github.com/webpack/extract-text-webpack-plugin
