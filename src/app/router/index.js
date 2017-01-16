@@ -12,6 +12,11 @@ export default new Router({
     path: '/peopleList',
     component: require('../components/PeopleList/PeopleList')
   }, {
+    name: 'people',
+    path: '/people/:slug?',
+    component: require('../components/People/People')
+  },
+  {
     path: '/about',
     component: () => require.ensure([], () => require('../components/About/About'), 'About'),
     name: 'about'

@@ -17,8 +17,10 @@
           label#g_female(for='g_female') Female
           .check
   ul.bob(v-show='!pending')
-    li(v-for='person in filteredPeople')
+
+    li(v-for='(person, index) in filteredPeople')
       .item
-        img.item_avatar(:src='person.picture.thumbnail', v-bind:class="[person.gender]")
+        router-link(:to="{ name: 'people', params: { slug: index }}")
+          img.item_avatar(:src='person.picture.thumbnail', v-bind:class="[person.gender]")
         .item_label
-          | {{person.name.first | capitalize}} {{person.name.last.toUpperCase()}}
+        | {{person.name.first | capitalize}} {{person.name.last.toUpperCase()}}
