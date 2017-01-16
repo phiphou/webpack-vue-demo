@@ -15,7 +15,6 @@ dependencies:
         curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
       fi
   override:
-    - npm i vue-template-compiler -D
     - rm yarn.lock
     - yarn install
   cache_directories:
@@ -23,8 +22,8 @@ dependencies:
     - ~/.cache/yarn
   post:
     # get Sauce Connect from saucelabs
-    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
-    - tar -xzf sc-latest-linux.tar.gz
+    - wget https://saucelabs.com/downloads/sc-4.4.2-linux.tar.gz
+    - tar -xzf sc-4.4.2-linux.tar.gz
 
 test:
   # run unit tests and send coverage reports to Codecov
@@ -38,7 +37,7 @@ test:
     #- while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
     - |
       if [[ ! ${CI_PULL_REQUEST} ]]; then
-        cd sc-*-linux && ./bin/sc --user ${SAUCE_USERNAME} --api-key ${SAUCE_ACCESS_KEY} --readyfile ~/sauce_is_ready &
+        cd sc-*-linux && ./bin/sc -r 10 --user ${SAUCE_USERNAME} --api-key ${SAUCE_ACCESS_KEY} --readyfile ~/sauce_is_ready &
         while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
         npm run e2e -- --env chrome_win7,firefox_mac,ie11,edge14,android,ios
         killall --wait sc
