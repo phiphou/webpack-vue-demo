@@ -39,7 +39,7 @@ describe('PeopleList.vue', () => {
 
 describe('Call API', () => {
   const vm = new Vue(Hello).$mount()
-
+  vm.persons = null
   beforeEach(() => {
     Vue.http.interceptors.push((request, next) => {
       next(request.respondWith(JSON.stringify(mocks.people), {

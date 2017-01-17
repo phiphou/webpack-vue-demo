@@ -36,6 +36,7 @@ export default {
   },
   mounted () {
     // this.$user = this.$resource(this.API_endPoint)
+    // console.log(this.slug)
     this.getPeople(this.slug)
     Vue.nextTick(function () {
     // list is rendered
