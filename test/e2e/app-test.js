@@ -20,7 +20,7 @@ module.exports = {
     homePage.init()
     // this.waitForElementVisible('@active_link', 1000)
     // homePage.assert.urlEquals('http://localhost:8082/#/home')
-    browser.saveScreenshot(browser.screenshotsPath + '/screenshot.png')
+    // browser.saveScreenshot(browser.screenshotsPath + '/screenshot.png')
     homePage.assert.cssClassPresent('@active_link', 'router-link-active')
     homePage.expect.element('@homeDiv').to.be.present
     homePage.assert.containsText('@homeDiv', 'Home')

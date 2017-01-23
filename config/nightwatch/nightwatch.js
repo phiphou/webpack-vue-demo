@@ -94,7 +94,11 @@ module.exports = {
       username: '${SAUCE_USERNAME}',
       access_key: '${SAUCE_ACCESS_KEY}',
       desiredCapabilities: {
-        browserName: 'android'
+        deviceName: 'Android Emulator',
+        browserName: 'Browser',
+        platformVersion: '5.1',
+        platformName: 'Android',
+        appiumVersion: '1.5.3'
       }
     },
     'ios': {

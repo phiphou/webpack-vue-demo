@@ -5,11 +5,11 @@ module.exports = config => {
     autoWatch: false,
     browserDisconnectTimeout: 2000,
     browserNoActivityTimeout: 10000,
-    // browserConsoleLogOptions: {
-    //   level: 'debug',
-    //   format: '%b %T: %m',
-    //   terminal: false
-    // },
+    browserConsoleLogOptions: {
+      level: 'debug',
+      format: '%b %T: %m',
+      terminal: false
+    },
     browsers: process.env.CIRCLE_ENV ? ['PhantomJS'] : ['Chrome'],
     captureTimeout: 60000,
     colors: true,

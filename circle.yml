@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 7.3
+    version: 7.4
   environment:
     YARN_VERSION: 0.18.1
     PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
@@ -9,49 +9,37 @@ dependencies:
   pre:
     # - echo ${CI_PULL_REQUEST}
     # - echo ${CIRCLE_PR_USERNAME} ${CIRCLE_PR_REPONAME} ${CIRCLE_PR_NUMBER}
-    - rm -rf node_modules
+    # - rm -rf node_modules
     - |
       if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then
         curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
       fi
   override:
-    - rm yarn.lock
     - yarn install
   cache_directories:
     - ~/.yarn
     - ~/.cache/yarn
   post:
     # get Sauce Connect from saucelabs
-    - wget https://saucelabs.com/downloads/sc-4.4.2-linux.tar.gz
-    - tar -xzf sc-4.4.2-linux.tar.gz
-
+    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
+    - tar -xzf sc-latest-linux.tar.gz
 test:
   # run unit tests and send coverage reports to Codecov
   override:
     - yarn test
     - bash <(curl -s https://codecov.io/bash)
   post:
-    # - npm run prod
-    #- cd sc-*-linux && ./bin/sc --user ${SAUCE_USERNAME} --api-key ${SAUCE_ACCESS_KEY} --readyfile ~/sauce_is_ready:
-    #      background: true
-    #- while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
-    - |
-      if [[ ! ${CI_PULL_REQUEST} ]]; then
-        cd sc-*-linux && ./bin/sc -r 10 --user ${SAUCE_USERNAME} --api-key ${SAUCE_ACCESS_KEY} --readyfile ~/sauce_is_ready &
-        while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
-        npm run e2e -- --env chrome_win7,firefox_mac,ie11,edge14,android,ios
-        killall --wait sc
-      fi
+    - npm run prod
+    # Run sauce connect and wait for tunnel to be ready
+    - cd sc-*-linux && ./bin/sc --user ${SAUCE_USERNAME} --api-key ${SAUCE_ACCESS_KEY} --readyfile ~/sauce_is_ready:
+        background: true
+    - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done:
+        timeout: 1900
+    # Run E2E tests
+    - npm run e2e -- --env chrome_win7,firefox_mac,ie11,edge14,android,ios:
+        timeout: 1900
+    # Kill sauce connect
+    - killall --wait sc
     # Copy and move reports
     - cp ./reports/unit/test-results.xml ${CIRCLE_TEST_REPORTS}
     - mv ./reports ${CIRCLE_ARTIFACTS}
-    - |
-      if [[ ${CI_PULL_REQUEST} ]]; then
-        yarn
-        git config -g user.email ${GIT_USER_EMAIL}
-        git config -g user.name ${GIT_USER_NAME}
-        git config -g push.default simple
-        git add yarn.lock
-        git commit -m "chore&colon; update yarn.lock"
-        git push
-      fi
