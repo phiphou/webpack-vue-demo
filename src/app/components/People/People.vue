@@ -3,16 +3,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import store from '../../store'
+import router from '../../router'
 Vue.use(Vuex)
 
 export default {
   name: 'People',
+  router: router,
   data () {
     return {
       slug: this.$route.params.slug,
       person: null
-      // environment: process.env.NODE_ENV,
-      // API_endPoint: process.env.API_endPoint
     }
   },
   methods: {
@@ -28,18 +28,15 @@ export default {
         //   })
         // })
       } else {
-        this.person = store.state.persons[this.slug]
+        this.person = store.state.persons[i]
       }
     }
   },
-  computed: {
-  },
   mounted () {
     // this.$user = this.$resource(this.API_endPoint)
-    // console.log(this.slug)
-    this.getPeople(this.slug)
+    this.getPeople(this.$route.params.slug)
     Vue.nextTick(function () {
-    // list is rendered
+    // // list is rendered
     })
   }
 }
