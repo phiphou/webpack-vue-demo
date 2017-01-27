@@ -3872,9 +3872,9 @@ karma-sourcemap-loader@~0.3.7:
   dependencies:
     graceful-fs "^4.1.2"
 
-karma-webpack@~2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/karma-webpack/-/karma-webpack-2.0.2.tgz#bd38350af5645c9644090770939ebe7ce726f864"
+karma-webpack@~2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/karma-webpack/-/karma-webpack-2.0.1.tgz#271ac955685b9bd99365ef010ffc5655eac28ef6"
   dependencies:
     async "~0.9.0"
     loader-utils "^0.2.5"
@@ -6766,9 +6766,9 @@ vue-hot-reload-api@^2.0.1:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.0.6.tgz#817d4bfb30f55428aa1012d029499e07f3147d21"
 
-vue-loader@^10.1.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-10.1.0.tgz#bc95ca8f605d674a407ad24783e7a907e0e01eaf"
+vue-loader@^10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-10.0.2.tgz#6fe7bcefb32c5439bd0338464aa22673ad62299c"
   dependencies:
     consolidate "^0.14.0"
     hash-sum "^1.0.2"
@@ -6865,9 +6865,9 @@ webpack-md5-hash@0.0.5:
   dependencies:
     md5 "^2.0.0"
 
-webpack-merge@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-2.5.0.tgz#1f4ba25b533f0a9a3be15716b5bd7bd6b6af94fb"
+webpack-merge@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-2.6.0.tgz#52333b44d3a2dcf6143bafcd9f77e0f49e2a25be"
   dependencies:
     lodash "^4.17.4"
 
