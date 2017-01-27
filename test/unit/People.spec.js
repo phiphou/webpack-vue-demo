@@ -24,7 +24,7 @@ describe('People', () => {
   })
 
   it('should work with async code2', () => {
-    router.push('/People/1')
+    router.push('/peopleList/1')
     store.state.persons = mocks.people.results
     vm.$children[0].getPeople(1)
     expect(vm.$route.params.slug).to.be.equal('1')

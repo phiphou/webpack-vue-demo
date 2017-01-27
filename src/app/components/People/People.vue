@@ -18,7 +18,7 @@ export default {
   methods: {
     getPeople (i) {
       if (store.state.persons.length === 0) {
-        this.$router.push('/PeopleList')
+        this.$router.push('/peopleList')
         // this.$user.query({
         //   results: 10
         // }).then(response => {
@@ -32,8 +32,7 @@ export default {
       }
     }
   },
-  mounted () {
-    // this.$user = this.$resource(this.API_endPoint)
+  created () {
     this.getPeople(this.$route.params.slug)
     Vue.nextTick(function () {
     // // list is rendered

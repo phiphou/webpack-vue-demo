@@ -25,7 +25,13 @@ export default {
             results: num
           }).then(response => {
             response.json().then(data => {
-              store.state.persons = this.persons = data.results
+              let parsed = []
+              let i = 0
+              for (let p of data.results) {
+                let copy = Object.assign({id: i++}, p)
+                parsed.push(copy)
+              }
+              store.state.persons = this.persons = parsed
               this.pending = false
               resolve(data.results.length)
             })

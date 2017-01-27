@@ -3,18 +3,39 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+const Parent = {
+  template: `
+    <div class="parent">
+      <transition name="fade">
+        <router-view class="child-view"></router-view>
+      </transition>
+    </div>
+  `
+}
+
 export default new Router({
   mode: 'hash',
   routes: [{
     path: '/home',
     component: require('../components/Home/Home')
-  }, {
-    path: '/peopleList',
-    component: require('../components/PeopleList/PeopleList')
-  }, {
-    name: 'people',
-    path: '/people/:slug?',
-    component: require('../components/People/People')
+  },
+  //, {
+  //   path: '/peopleList',
+  //   component: require('../components/PeopleList/PeopleList')
+  // }, {
+  //   name: 'people',
+  //   path: '/people/:slug?',
+  //   component: require('../components/People/People')
+  // },
+  { path: '/peopleList',
+    component: Parent,
+    children: [
+      { path: '',
+        component: require('../components/PeopleList/PeopleList')},
+      { path: ':slug?',
+        name: 'people',
+        component: require('../components/People/People')}
+    ]
   },
   {
     path: '/about',
