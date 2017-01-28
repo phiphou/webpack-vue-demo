@@ -18,7 +18,7 @@
           .check
   ul.bob(v-show='!pending')
 
-    li(v-for='person in filteredPeople')
+    li(v-for='(person, index) in filteredPeople')
       .item
         router-link(:to="{ name: 'people', params: { slug: person.id }}")
           img.item_avatar(:src='person.picture.thumbnail', v-bind:class="[person.gender]")

@@ -10,7 +10,7 @@ module.exports = config => {
       format: '%b %T: %m',
       terminal: false
     },
-    browsers: process.env.CIRCLE_ENV ? ['PhantomJS'] : ['Chrome'],
+    browsers: !process.env.CIRCLE_ENV ? ['PhantomJS'] : ['Chrome'],
     captureTimeout: 60000,
     colors: true,
     concurrency: Infinity,

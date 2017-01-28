@@ -9,7 +9,7 @@ module.exports = {
   commands: [{
     init () {
       this.navigate()
-      this.waitForElementVisible('body', 10000)
+      this.waitForElementVisible('.menu', 10000)
       return this.api
     }
   }]

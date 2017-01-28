@@ -14,7 +14,6 @@ body
   background: #000000
   color: #FFFFFF
   position: relative
-  overflow-y:hidden
 
 #header
   height: 100px
@@ -38,10 +37,8 @@ body
 #content
   height: 100%
   padding: 0 0px
-  display: inline-block
   > div
-    padding: 0
-    margin: 0
+    padding: 100px 0
 
 h1.title
   font-size: 28px
@@ -90,63 +87,22 @@ h1#logo
 
 .router-view
   // margin: 15px
-  margin-top: 140px
-  // margin-top: 60px
-  //margin-left: 15px
-  //margin-right: 15px
-  overflow: hidden
-
-.fade-enter-active, .fade-leave-active
-  transition: opacity .2s ease
-
-.fade-enter, .fade-leave-active
-  transition: opacity .2s ease
-  opacity: 0
-
-.fade-enter-active, .fade-leave-active
-  transition: opacity .2s ease
-
-.fade-enter, .fade-leave-active
-  opacity: 0
-
-div#home, div#about,
-  margin-left: 15px
-
-.child-view
-  position: fixed
-  // width: 100%
-  // left: 0
-  overflow: hidden
-  margin-left: auto
-  margin-right: auto
-  width: 100%
-  // transition: all .5s cubic-bezier(.55,0,.1,1)
-
-// .slide-left-enter, .slide-right-leave-active
-//   opacity: 0
-//   position: absolute
-//   transform: translate(30px, 0)
-//
-// .slide-left-leave-active, .slide-right-enter
-//   opacity: 0
-//   position: absolute
-//   transform: translate(-30px, 0)
-.bob2
-  margin-top: 40px
-  width: 360px
+  margin-top: 60px
   margin-left: 15px
   margin-right: 15px
 
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .2s ease
+.fade-enter, .fade-leave-active
+  transition: opacity .2s ease
+  opacity: 0
+
 @media only screen and (min-width: 1064px)
-  .bob2
-    margin-top: 70px
-    width: 360px
-    margin-left: auto
-    margin-right: auto
   h1.title
     font-size: 24px
   .router-view
-    margin-top: 130px
+    margin-top: 60px
   #footer
     height: 30px
     display: block
