@@ -38,8 +38,8 @@ describe('PeopleList.vue', () => {
 })
 
 describe('Call API', () => {
-  const vm = new Vue(Hello).$mount()
-  vm.persons = null
+  const Ctor = Vue.extend(Hello)
+  const vm = new Ctor().$mount()
   beforeEach(() => {
     Vue.http.interceptors.push((request, next) => {
       next(request.respondWith(JSON.stringify(mocks.people), {

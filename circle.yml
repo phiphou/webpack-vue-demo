@@ -36,7 +36,7 @@ test:
     - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done:
         timeout: 1900
     # Run E2E tests
-    - npm run e2e -- --env chrome_win7,firefox_mac,edge14,android,ios:
+    - npm run e2e -- --env chrome_win7,firefox_mac,ie11,edge14,android,ios:
         timeout: 1900
     # Kill sauce connect
     - killall --wait sc
