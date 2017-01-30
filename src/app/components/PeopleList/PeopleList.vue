@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import store from '../../store'
+import UserService from '../../services/UserService'
 Vue.use(Vuex)
 Vue.filter('capitalize', value => value.charAt(0).toUpperCase() + value.substr(1))
 
@@ -21,9 +22,7 @@ export default {
     getPeople (num) {
       return new Promise((resolve, reject) => {
         if (store.state.persons.length === 0) {
-          this.$user.query({
-            results: num
-          }).then(response => {
+          UserService.get().then(response => {
             response.json().then(data => {
               let parsed = []
               let i = 0
@@ -56,10 +55,8 @@ export default {
     }
   },
   mounted () {
-    this.$user = this.$resource(this.API_endPoint)
     this.reload()
     Vue.nextTick(function () {
-    // list is rendered
     })
   }
 }

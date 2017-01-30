@@ -9,8 +9,7 @@ const Parent = {
       <transition name="fade">
         <router-view class="child-view"></router-view>
       </transition>
-    </div>
-  `
+    </div>`
 }
 
 export default new Router({
@@ -19,14 +18,6 @@ export default new Router({
     path: '/home',
     component: require('../components/Home/Home')
   },
-  //, {
-  //   path: '/peopleList',
-  //   component: require('../components/PeopleList/PeopleList')
-  // }, {
-  //   name: 'people',
-  //   path: '/people/:slug?',
-  //   component: require('../components/People/People')
-  // },
   { path: '/peopleList',
     component: Parent,
     children: [

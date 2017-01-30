@@ -3,8 +3,11 @@
 // const chaiAsPromised = require('chai-as-promised')
 // chai.use(chaiAsPromised)
 import Vue from 'vue'
+import Router from 'vue-router'
+Vue.use(Router)
 import Hello from '../../src/app/components/PeopleList/PeopleList'
 Vue.use(require('vue-resource'))
+
 import router from '../../src/app/router'
 const mocks = require('../mocks/db.json')
 

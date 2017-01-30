@@ -19,14 +19,6 @@ export default {
     getPeople (i) {
       if (store.state.persons.length === 0) {
         this.$router.push('/peopleList')
-        // this.$user.query({
-        //   results: 10
-        // }).then(response => {
-        //   response.json().then(data => {
-        //     store.state.persons = this.persons = data.results
-        //     this.person = this.persons[this.slug]
-        //   })
-        // })
       } else {
         this.person = store.state.persons[i]
       }

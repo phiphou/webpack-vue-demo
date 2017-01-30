@@ -8,7 +8,7 @@ module.exports = config => {
     browserConsoleLogOptions: {
       level: 'debug',
       format: '%b %T: %m',
-      terminal: false
+      terminal: true
     },
     browsers: process.env.CIRCLE_ENV ? ['PhantomJS'] : ['Chrome'],
     captureTimeout: 60000,
