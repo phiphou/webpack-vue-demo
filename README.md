@@ -17,9 +17,9 @@
     <a href="http://opensource.org/licenses/MIT">
       <img src="https://img.shields.io/badge/Licence-MIT-blue.svg" alt="MIT license">
     </a>
-    <a href="#" style="text-decoration:none">
+    <!-- <a href="#" style="text-decoration:none">
       <img src="https://reposs.herokuapp.com/?path=phiphou/webpack-vue-demo" alt="Size">
-    </a>
+    </a> -->
 </p>
 <p align="center">
   <a href="https://saucelabs.com/u/phiphou"><img src="https://saucelabs.com/browser-matrix/phiphou.svg" alt="Browser Matrix"></a>
@@ -68,7 +68,7 @@ $ npm install
 ```
 Dependencies will be installed in the `./node_modules` folder.
 
-You can also use the new **[Yarn](https://yarnpkg.com/)** package manager.
+You can also use the new **[Yarn](https://yarnpkg.com/)** package manager (and should have a look on it if you don't know it).
 
 ```bash
 $ yarn
@@ -142,7 +142,7 @@ It will also generate [LCOV format](http://ltp.sourceforge.net/coverage/lcov.php
 
 ### Continuous integration
 
-[CircleCI](https://circleci.com/) is used for continuous integration, [Codecov](https://codecov.io) for coverage and [SauceLabs](https://saucelabs.com/) for cross-browsers testing.
+[CircleCI](https://circleci.com/) is used for continuous integration, [Codecov](https://codecov.io) as code coverage tool and [SauceLabs](https://saucelabs.com/) for cloud cross-browsers testing.
 
 See [`./circleci.yml`](/circle.yml) and badges at the top of this document.
 
