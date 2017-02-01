@@ -29,17 +29,6 @@
 
 A very basic but complete demo project that use [VueJs](http://babeljs.io/) as front-end framework (with [Vue-resource](https://github.com/pagekit/vue-resource), [Vue-router](https://github.com/vuejs/vue-router) and [VueX](https://github.com/vuejs/vuex)), [Babel](http://babeljs.io/) for [ES6](http://www.ecma-international.org/ecma-262/6.0/)/[ES7](http://www.ecma-international.org/ecma-262/7.0/) transpilation, [Webpack2](http://webpack.github.io/) as module bundler, [SASS](http://sass-lang.com/) as CSS preprocessor, [Karma](https://karma-runner.github.io/1.0/), [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/) for unit tests, [nightwatch](http://nightwatchjs.org/) for e2e tests and finally [Istanbul](https://github.com/gotwarlost/istanbul) for code coverage.
 
-## Quick Start
-
-```bash
-$ git clone --depth 1 https://github.com/phiphou/webpack-vue-demo.git
-$ cd webpack-vue-demo
-$ npm install
-$ npm run start
-```
-
-Your default browser should open at [http://127.0.0.1:8080](http://127.0.0.1:8080), then you can start developing in [`./src/app/main.js`](https://github.com/phiphou/webpack-vue-demo/blob/master/src/app/main.js)
-
 ## Table of contents
  * [Quick Start](#quick-start)
  * [Install](#install)
@@ -52,6 +41,17 @@ Your default browser should open at [http://127.0.0.1:8080](http://127.0.0.1:808
      * [Coverage](#coverage)
    * [Continuous integration](#continuous-integration)
  * [License](#license)
+
+## Quick Start
+
+```bash
+$ git clone --depth 1 https://github.com/phiphou/webpack-vue-demo.git
+$ cd webpack-vue-demo
+$ npm install
+$ npm run start
+```
+
+Your default browser should open at [http://127.0.0.1:8080](http://127.0.0.1:8080), then you can start developing in [`./src/app/main.js`](https://github.com/phiphou/webpack-vue-demo/blob/master/src/app/main.js)
 
 ## Install
 
