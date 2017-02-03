@@ -3,7 +3,7 @@
 // import 'core-js'
 
 // or import just those needed
-// import 'core-js/es6/array'
+import 'core-js/es6/array'
 // import 'core-js/es6/date'
 import 'core-js/es6/function'
 // import 'core-js/es6/map'

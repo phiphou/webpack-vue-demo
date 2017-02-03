@@ -11,7 +11,7 @@ module.exports = {
   globals_path: 'config/nightwatch/globals.js',
   selenium: {
     start_process: !process.env.CIRCLE_ENV,
-    server_path: './node_modules/selenium-standalone/.selenium/selenium-server/2.53.1-server.jar',
+    server_path: './node_modules/selenium-standalone/.selenium/selenium-server/3.0.1-server.jar',
     log_path: `${projectRoot}/reports/e2e/`,
     host: '127.0.0.1',
     port: 4444,
