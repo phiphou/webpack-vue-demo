@@ -19,7 +19,7 @@
   ul.bob(v-if='!pending')
     li(v-if='filteredPeople.length != 0', v-for='person in filteredPeople')
       .item
-        router-link(:to="{name: 'people', params: { slug: person.id}}")
+        router-link(:to="{name: 'people', params: {slug: person.id}}")
           img.item_avatar(:src='person.picture.thumbnail', v-bind:class="[person.gender]")
         .item_label
         | {{person.name.first | capitalize}} {{person.name.last.toUpperCase()}}

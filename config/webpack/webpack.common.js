@@ -24,7 +24,7 @@ module.exports = {
     extensions: ['.js', '.pug', '.css', '.vue', '.scss', '.sass'],
     alias: {
       'app': 'src/app',
-      'vue$': 'vue/dist/vue'
+      'vue$': 'vue/dist/vue.common.js'
     }
   },
   module: {

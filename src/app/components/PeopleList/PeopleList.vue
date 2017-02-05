@@ -27,7 +27,9 @@ export default {
               let parsed = []
               let i = 0
               for (let p of data.results) {
-                parsed.push(Object.assign({id: i++}, p))
+                let clone = Object.assign({}, p)
+                clone.id = i++
+                parsed.push(clone)
               }
               store.state.persons = this.persons = parsed
               this.pending = false
