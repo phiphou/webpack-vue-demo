@@ -55,16 +55,16 @@ module.exports = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader?sourceMap!postcss-loader'
+          fallback: 'style-loader',
+          use: 'css-loader?sourceMap!postcss-loader'
         })
       },
       // support for .scss/.sass files
       {
         test: /\.(scss|sass)$/,
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader?sourceMap!postcss-loader!sass-loader'
+          fallback: 'style-loader',
+          use: 'css-loader?sourceMap!postcss-loader!sass-loader'
         })
       },
       {
@@ -79,8 +79,8 @@ module.exports = {
         options: {
           loaders: {
             sass: ExtractTextPlugin.extract({
-              loader: 'css-loader?sourceMap!postcss-loader!sass-loader',
-              fallbackLoader: 'vue-style-loader' // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
+              use: 'css-loader?sourceMap!postcss-loader!sass-loader',
+              fallback: 'vue-style-loader' // <- this is a dep of vue-loader, so no need to explicitly install if using npm3
             })
           }
         }

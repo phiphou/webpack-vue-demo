@@ -17,7 +17,7 @@ module.exports = {
     port: 4444,
     silent: true,
     cli_args: {
-      'webdriver.chrome.driver': './node_modules/selenium-standalone/.selenium/chromedriver/2.25-x64-chromedriver',
+      'webdriver.chrome.driver': './node_modules/selenium-standalone/.selenium/chromedriver/2.28-x64-chromedriver',
       'webdriver.gecko.driver': require('geckodriver').path,
       'webdriver.ie.driver': require('iedriver').path
     }
